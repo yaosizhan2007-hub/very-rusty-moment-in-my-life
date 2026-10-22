@@ -233,6 +233,54 @@ def test_empty_playlist_reports_empty_path():
     assert audio.current_index == 0
 
 
+def test_alias_parsing_and_migration(tmp_path):
+    """aliases 支持列表/逗号字符串，v2→v3 迁移给内置词补近义词但不覆盖用户写法。"""
+    path = tmp_path / "config.json"
+    path.write_text(
+        json.dumps(
+            {
+                "version": 2,
+                "keywords": {
+                    "positives": [
+                        {"phrase": "别管我", "weight": 1.0},
+                        {"phrase": "我尽力了", "weight": 1.0, "aliases": ["我拼了"]},
+                        {"phrase": "自定义词", "weight": 0.7, "aliases": "说法A，说法B"},
+                    ]
+                }
+            }
+        ),
+        encoding="utf-8",
+    )
+    config, issues = ConfigManager(config_path=path, template_path=TEMPLATE).load_with_issues()
+    assert config.version == CURRENT_CONFIG_VERSION
+
+    by_phrase = {item["phrase"]: item for item in config.keywords.positives}
+    # 内置词：自动补上默认近义词
+    assert "别救我" in by_phrase["别管我"]["aliases"]
+    # 用户自己写的近义词：原样保留，不被覆盖
+    assert by_phrase["我尽力了"]["aliases"] == ["我拼了"]
+    # 字符串形式的 aliases 也能解析
+    assert by_phrase["自定义词"]["aliases"] == ["说法A", "说法B"]
+    assert any("v3" in item for item in issues)
+
+
+def test_alias_equal_to_phrase_is_dropped(tmp_path):
+    path = tmp_path / "config.json"
+    path.write_text(
+        json.dumps(
+            {
+                "version": 3,
+                "keywords": {
+                    "positives": [{"phrase": "别管我", "weight": 1.0, "aliases": ["别管我", "别救我"]}]
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+    config, _ = ConfigManager(config_path=path, template_path=TEMPLATE).load_with_issues()
+    assert config.keywords.positives[0]["aliases"] == ["别救我"]
+
+
 def test_obs_control_enabled_defaults_true(tmp_path):
     path = tmp_path / "config.json"
     path.write_text(json.dumps({"version": 2, "obs": {"host": "127.0.0.1"}}), encoding="utf-8")

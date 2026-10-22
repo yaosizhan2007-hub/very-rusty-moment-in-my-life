@@ -39,7 +39,7 @@ RustyMoment.exe --perf      :: 性能测量，结果写到 …\logs\perf-report.
 
 直接解压覆盖 `RustyMoment/` 目录即可，配置与凭据都在 `%APPDATA%\RustyMoment\`，不会丢。
 
-配置版本会自动迁移（v1 的单曲路径 → v2 的曲目列表）；迁移失败或配置损坏时，程序会备份为 `config.corrupt-<时间>.json` 并提示恢复默认。
+配置版本会自动迁移（v1 单曲路径 → v2 曲目列表 → v3 给关键词补常见近义说法）；迁移失败或配置损坏时，程序会备份为 `config.corrupt-<时间>.json` 并提示恢复默认。
 
 ### 5. 卸载
 

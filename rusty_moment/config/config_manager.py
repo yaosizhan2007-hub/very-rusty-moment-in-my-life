@@ -13,6 +13,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import re
 import sys
 import tempfile
 import time
@@ -22,7 +23,7 @@ from typing import Any
 
 log = logging.getLogger(__name__)
 
-CURRENT_CONFIG_VERSION = 2
+CURRENT_CONFIG_VERSION = 3
 
 VALID_MODES = ("serious", "chaotic")
 VALID_STRATEGIES = ("mute", "duck")
@@ -34,29 +35,37 @@ VALID_STT_BACKENDS = ("none", "faster_whisper")
 
 # 内置示例词库：模板文件缺失时也能工作。仅作示例，用户可在设置里增删。
 DEFAULT_POSITIVE_KEYWORDS: list[dict[str, Any]] = [
-    {"phrase": "别管我", "weight": 1.0},
-    {"phrase": "你们快走", "weight": 1.0},
-    {"phrase": "快走", "weight": 0.5},
-    {"phrase": "我来拖住", "weight": 1.0},
-    {"phrase": "拖住他们", "weight": 0.8},
-    {"phrase": "我尽力了", "weight": 1.0},
-    {"phrase": "替我报仇", "weight": 1.0},
-    {"phrase": "我撑不住了", "weight": 0.9},
-    {"phrase": "至少我做到了", "weight": 0.8},
-    {"phrase": "照顾好我妈", "weight": 1.0},
-    {"phrase": "不要管我", "weight": 1.0},
-    {"phrase": "这次真的要走了", "weight": 0.7},
+    {"phrase": "别管我", "weight": 1.0, "aliases": ["别救我", "不要救我", "别理我", "不用管我", "别管我了"]},
+    {"phrase": "你们快走", "weight": 1.0, "aliases": ["你们走吧", "你们先走", "快跑吧"]},
+    {"phrase": "快走", "weight": 0.5, "aliases": ["快跑", "赶紧走"]},
+    {"phrase": "我来拖住", "weight": 1.0, "aliases": ["我拖住", "我拦住他们", "我来顶住"]},
+    {"phrase": "拖住他们", "weight": 0.8, "aliases": ["拖住他", "拦住他们"]},
+    {"phrase": "我尽力了", "weight": 1.0, "aliases": ["已经尽力了", "我尽力啦", "我尽力了呀"]},
+    {"phrase": "替我报仇", "weight": 1.0, "aliases": ["帮我报仇", "给我报仇", "替我报仇啊"]},
+    {"phrase": "我撑不住了", "weight": 0.9, "aliases": ["我顶不住了", "撑不住了", "我不行了"]},
+    {"phrase": "至少我做到了", "weight": 0.8, "aliases": ["至少我尽力了", "至少做到了"]},
+    {"phrase": "照顾好我妈", "weight": 1.0, "aliases": ["照顾好我爸妈", "照顾好我妈咪"]},
+    {"phrase": "不要管我", "weight": 1.0, "aliases": ["不用管我", "不要管我了"]},
+    {"phrase": "这次真的要走了", "weight": 0.7, "aliases": ["真的要走了", "这次真走了"]},
 ]
 
 DEFAULT_EXCLUSIONS: list[dict[str, Any]] = [
     {"phrase": "别管我吃什么", "weight": 1.0},
     {"phrase": "别管我睡觉", "weight": 1.0},
     {"phrase": "我尽力了但是", "weight": 0.5},
-    {"phrase": "开玩笑", "weight": 1.0},
-    {"phrase": "哈哈", "weight": 0.6},
-    {"phrase": "笑死", "weight": 0.6},
-    {"phrase": "队友呢", "weight": 0.4},
+    {"phrase": "开玩笑", "weight": 1.0, "aliases": ["开个玩笑", "逗你玩", "说着玩"]},
+    {"phrase": "哈哈", "weight": 0.6, "aliases": ["哈哈哈", "hhhh"]},
+    {"phrase": "笑死", "weight": 0.6, "aliases": ["笑死我了", "笑死我"]},
+    {"phrase": "队友呢", "weight": 0.4, "aliases": ["队友在哪", "队友去哪了"]},
 ]
+
+# 老配置升级用：phrase -> 常见近义说法。只用于「用户词条没有 aliases 时补全」，
+# 不会覆盖用户自己写的近义词。
+DEFAULT_ALIASES: dict[str, list[str]] = {
+    item["phrase"]: list(item.get("aliases", []))
+    for item in (*DEFAULT_POSITIVE_KEYWORDS, *DEFAULT_EXCLUSIONS)
+    if item.get("aliases")
+}
 
 
 class ConfigError(Exception):
@@ -116,24 +125,47 @@ def _as_str(value: Any, default: str = "") -> str:
     return str(value)
 
 
+def _as_alias_list(value: Any) -> list[str]:
+    """近义说法：支持列表，或用 , ， 、 ; 分隔的字符串。"""
+    if isinstance(value, str):
+        parts = re.split(r"[,，、;；]| / ", value)
+    elif isinstance(value, (list, tuple)):
+        parts = [str(item) for item in value]
+    else:
+        return []
+    out: list[str] = []
+    seen: set[str] = set()
+    for part in parts:
+        text = part.strip()
+        if text and text not in seen:
+            seen.add(text)
+            out.append(text)
+    return out
+
+
 def _as_phrase_list(value: Any, default: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """关键词列表：过滤空词组、去重、权重收敛到 [0, 2]。"""
+    """关键词列表：过滤空词组、去重、权重收敛到 [0, 2]，支持近义说法 aliases。"""
     if not isinstance(value, list):
-        return [dict(item) for item in default]
+        return [{**item} for item in default]
     out: list[dict[str, Any]] = []
     seen: set[str] = set()
     for item in value:
         if isinstance(item, str):
-            phrase, weight = item, 1.0
+            phrase, weight, aliases = item, 1.0, []
         elif isinstance(item, dict):
             phrase = _as_str(item.get("phrase", "")).strip()
             weight = _as_float(item.get("weight", 1.0), 1.0, 0.0, 2.0)
+            aliases = _as_alias_list(item.get("aliases"))
         else:
             continue
         if not phrase or phrase in seen:
             continue
         seen.add(phrase)
-        out.append({"phrase": phrase, "weight": weight})
+        entry: dict[str, Any] = {"phrase": phrase, "weight": weight}
+        clean_aliases = [alias for alias in aliases if alias != phrase]
+        if clean_aliases:
+            entry["aliases"] = clean_aliases
+        out.append(entry)
     return out
 
 
@@ -692,6 +724,7 @@ def _migrate(raw: dict[str, Any], version: int) -> tuple[dict[str, Any], list[st
     """按版本逐级迁移配置。
 
     v1 → v2：把单曲 ``audio.bgm_path`` 挪进 ``audio.playlist``（曲目列表）。
+    v2 → v3：给内置关键词补上常见近义说法（用户自己写过的 aliases 不覆盖）。
     """
     data = dict(raw)
     issues: list[str] = []
@@ -707,6 +740,29 @@ def _migrate(raw: dict[str, Any], version: int) -> tuple[dict[str, Any], list[st
                 migrated.pop("bgm_path", None)
                 data["audio"] = migrated
                 issues.append("配置已从 v1 迁移到 v2：单曲路径转成播放列表的第一首")
+    if version < 3:
+        keywords = data.get("keywords")
+        if isinstance(keywords, dict):
+            patched_count = 0
+            for key in ("positives", "exclusions"):
+                items = keywords.get(key)
+                if not isinstance(items, list):
+                    continue
+                patched: list[Any] = []
+                for item in items:
+                    if isinstance(item, dict):
+                        phrase = _as_str(item.get("phrase", ""), "").strip()
+                        has_alias = bool(_as_alias_list(item.get("aliases")))
+                        default_aliases = DEFAULT_ALIASES.get(phrase)
+                        if phrase and not has_alias and default_aliases:
+                            item = {**item, "aliases": list(default_aliases)}
+                            patched_count += 1
+                    patched.append(item)
+                keywords[key] = patched
+            if patched_count:
+                issues.append(
+                    f"配置已从 v2 迁移到 v3：为 {patched_count} 个关键词补充了常见近义说法"
+                )
     data["version"] = CURRENT_CONFIG_VERSION
     return data, issues
 

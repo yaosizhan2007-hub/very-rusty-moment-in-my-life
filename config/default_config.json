@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 3,
   "audio": {
     "playlist": [],
     "current_index": 0,
@@ -53,27 +53,157 @@
     "min_hits": 1,
     "case_sensitive": false,
     "positives": [
-      { "phrase": "别管我", "weight": 1.0 },
-      { "phrase": "你们快走", "weight": 1.0 },
-      { "phrase": "快走", "weight": 0.5 },
-      { "phrase": "我来拖住", "weight": 1.0 },
-      { "phrase": "拖住他们", "weight": 0.8 },
-      { "phrase": "我尽力了", "weight": 1.0 },
-      { "phrase": "替我报仇", "weight": 1.0 },
-      { "phrase": "我撑不住了", "weight": 0.9 },
-      { "phrase": "至少我做到了", "weight": 0.8 },
-      { "phrase": "照顾好我妈", "weight": 1.0 },
-      { "phrase": "不要管我", "weight": 1.0 },
-      { "phrase": "这次真的要走了", "weight": 0.7 }
+      {
+        "phrase": "别管我",
+        "weight": 1.0,
+        "aliases": [
+          "别救我",
+          "不要救我",
+          "别理我",
+          "不用管我",
+          "别管我了"
+        ]
+      },
+      {
+        "phrase": "你们快走",
+        "weight": 1.0,
+        "aliases": [
+          "你们走吧",
+          "你们先走",
+          "快跑吧"
+        ]
+      },
+      {
+        "phrase": "快走",
+        "weight": 0.5,
+        "aliases": [
+          "快跑",
+          "赶紧走"
+        ]
+      },
+      {
+        "phrase": "我来拖住",
+        "weight": 1.0,
+        "aliases": [
+          "我拖住",
+          "我拦住他们",
+          "我来顶住"
+        ]
+      },
+      {
+        "phrase": "拖住他们",
+        "weight": 0.8,
+        "aliases": [
+          "拖住他",
+          "拦住他们"
+        ]
+      },
+      {
+        "phrase": "我尽力了",
+        "weight": 1.0,
+        "aliases": [
+          "已经尽力了",
+          "我尽力啦",
+          "我尽力了呀"
+        ]
+      },
+      {
+        "phrase": "替我报仇",
+        "weight": 1.0,
+        "aliases": [
+          "帮我报仇",
+          "给我报仇",
+          "替我报仇啊"
+        ]
+      },
+      {
+        "phrase": "我撑不住了",
+        "weight": 0.9,
+        "aliases": [
+          "我顶不住了",
+          "撑不住了",
+          "我不行了"
+        ]
+      },
+      {
+        "phrase": "至少我做到了",
+        "weight": 0.8,
+        "aliases": [
+          "至少我尽力了",
+          "至少做到了"
+        ]
+      },
+      {
+        "phrase": "照顾好我妈",
+        "weight": 1.0,
+        "aliases": [
+          "照顾好我爸妈",
+          "照顾好我妈咪"
+        ]
+      },
+      {
+        "phrase": "不要管我",
+        "weight": 1.0,
+        "aliases": [
+          "不用管我",
+          "不要管我了"
+        ]
+      },
+      {
+        "phrase": "这次真的要走了",
+        "weight": 0.7,
+        "aliases": [
+          "真的要走了",
+          "这次真走了"
+        ]
+      }
     ],
     "exclusions": [
-      { "phrase": "别管我吃什么", "weight": 1.0 },
-      { "phrase": "别管我睡觉", "weight": 1.0 },
-      { "phrase": "我尽力了但是", "weight": 0.5 },
-      { "phrase": "开玩笑", "weight": 1.0 },
-      { "phrase": "哈哈", "weight": 0.6 },
-      { "phrase": "笑死", "weight": 0.6 },
-      { "phrase": "队友呢", "weight": 0.4 }
+      {
+        "phrase": "别管我吃什么",
+        "weight": 1.0
+      },
+      {
+        "phrase": "别管我睡觉",
+        "weight": 1.0
+      },
+      {
+        "phrase": "我尽力了但是",
+        "weight": 0.5
+      },
+      {
+        "phrase": "开玩笑",
+        "weight": 1.0,
+        "aliases": [
+          "开个玩笑",
+          "逗你玩",
+          "说着玩"
+        ]
+      },
+      {
+        "phrase": "哈哈",
+        "weight": 0.6,
+        "aliases": [
+          "哈哈哈",
+          "hhhh"
+        ]
+      },
+      {
+        "phrase": "笑死",
+        "weight": 0.6,
+        "aliases": [
+          "笑死我了",
+          "笑死我"
+        ]
+      },
+      {
+        "phrase": "队友呢",
+        "weight": 0.4,
+        "aliases": [
+          "队友在哪",
+          "队友去哪了"
+        ]
+      }
     ]
   },
   "rules": {

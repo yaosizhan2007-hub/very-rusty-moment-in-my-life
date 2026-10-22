@@ -105,6 +105,30 @@ def test_mode_switch_to_chaotic(tmp_path, qapp, qtbot):
     window.close()
 
 
+def test_phrase_text_roundtrip_with_aliases(qapp):
+    """设置页的词库文本支持「词组|权重|近义说法」，往返不丢信息。"""
+    from rusty_moment.ui.settings_dialog import _format_phrases, _parse_phrases
+
+    items = [
+        {"phrase": "别管我", "weight": 1.0, "aliases": ["别救我", "不要救我"]},
+        {"phrase": "快走", "weight": 0.5},
+    ]
+    text = _format_phrases(items)
+    assert "别管我|1|别救我,不要救我" in text
+
+    parsed = _parse_phrases(text)
+    assert parsed[0]["phrase"] == "别管我"
+    assert parsed[0]["aliases"] == ["别救我", "不要救我"]
+    assert "aliases" not in parsed[1]
+
+
+def test_phrase_text_accepts_chinese_comma_aliases(qapp):
+    from rusty_moment.ui.settings_dialog import _parse_phrases
+
+    parsed = _parse_phrases("别管我|1|别救我，不要管我、别理我")
+    assert parsed[0]["aliases"] == ["别救我", "不要管我", "别理我"]
+
+
 def test_output_mode_switch_to_local(tmp_path, qapp, qtbot):
     """切到「仅本地播歌」：写入配置、禁用连接按钮、状态灯改文案。"""
     window, ctx, _obs = make_window(tmp_path, qapp)

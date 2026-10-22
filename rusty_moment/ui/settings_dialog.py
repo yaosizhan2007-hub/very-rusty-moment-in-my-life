@@ -46,20 +46,43 @@ from .qt_bridge import run_async
 log = logging.getLogger(__name__)
 
 
+def _split_aliases(text: str) -> list[str]:
+    """把「别救我,不要管我」拆成列表（容忍中文逗号/顿号/分号）。"""
+    raw = (
+        (text or "")
+        .replace("，", ",")
+        .replace("、", ",")
+        .replace("；", ",")
+        .replace(";", ",")
+    )
+    out: list[str] = []
+    seen: set[str] = set()
+    for part in raw.split(","):
+        item = part.strip()
+        if item and item not in seen:
+            seen.add(item)
+            out.append(item)
+    return out
+
+
 def _format_phrases(items: list[dict[str, Any]]) -> str:
-    """把词库列表转成「词组|权重」的多行文本。"""
+    """把词库列表转成「词组|权重|近义说法,近义说法」的多行文本。"""
     lines = []
     for item in items or []:
         phrase = str(item.get("phrase", "")).strip()
         if not phrase:
             continue
         weight = float(item.get("weight", 1.0) or 1.0)
-        lines.append(f"{phrase}|{weight:g}")
+        line = f"{phrase}|{weight:g}"
+        aliases = [str(alias).strip() for alias in (item.get("aliases") or []) if str(alias).strip()]
+        if aliases:
+            line += "|" + ",".join(aliases)
+        lines.append(line)
     return "\n".join(lines)
 
 
 def _parse_phrases(text: str) -> list[dict[str, Any]]:
-    """解析「词组|权重」多行文本；空行与 # 注释忽略，权重越界自动收敛。"""
+    """解析「词组|权重|近义说法」多行文本；空行与 # 注释忽略，权重越界自动收敛。"""
     result: list[dict[str, Any]] = []
     seen: set[str] = set()
     for raw_line in (text or "").splitlines():
@@ -68,18 +91,24 @@ def _parse_phrases(text: str) -> list[dict[str, Any]]:
             continue
         separator = "|" if "|" in line else ("｜" if "｜" in line else "")
         if separator:
-            phrase, _, weight_text = line.partition(separator)
+            parts = line.split(separator, 2)
         else:
-            phrase, weight_text = line, "1.0"
-        phrase = phrase.strip()
+            parts = [line]
+        phrase = parts[0].strip()
+        weight_text = parts[1] if len(parts) > 1 else "1.0"
+        alias_text = parts[2] if len(parts) > 2 else ""
         if not phrase or phrase in seen:
             continue
         try:
             weight = float(weight_text.strip() or 1.0)
         except ValueError:
             weight = 1.0
+        entry: dict[str, Any] = {"phrase": phrase, "weight": max(0.0, min(2.0, weight))}
+        aliases = [alias for alias in _split_aliases(alias_text) if alias != phrase]
+        if aliases:
+            entry["aliases"] = aliases
         seen.add(phrase)
-        result.append({"phrase": phrase, "weight": max(0.0, min(2.0, weight))})
+        result.append(entry)
     return result
 
 
@@ -679,11 +708,13 @@ class SettingsDialog(QDialog):
         self.keywords_enabled_check = QCheckBox("启用关键词层", kw_box)
         self.keywords_enabled_check.setChecked(self._cfg.keywords.enabled)
         kw_layout.addWidget(self.keywords_enabled_check)
-        kw_layout.addWidget(QLabel("正向触发词（每行一条，格式：词组|权重，权重可省略）", kw_box))
+        kw_layout.addWidget(QLabel("正向触发词（每行一条：词组|权重|近义说法，后两段可省略）", kw_box))
         self.keywords_positive_edit = QPlainTextEdit(_format_phrases(self._cfg.keywords.positives), kw_box)
         self.keywords_positive_edit.setMinimumHeight(110)
         kw_layout.addWidget(self.keywords_positive_edit)
-        kw_layout.addWidget(QLabel("反向排除词（命中会按权重打折，不会强制否决）", kw_box))
+        kw_layout.addWidget(
+            QLabel("反向排除词（命中会按权重打折，不会强制否决）", kw_box)
+        )
         self.keywords_exclusion_edit = QPlainTextEdit(_format_phrases(self._cfg.keywords.exclusions), kw_box)
         self.keywords_exclusion_edit.setMinimumHeight(80)
         kw_layout.addWidget(self.keywords_exclusion_edit)

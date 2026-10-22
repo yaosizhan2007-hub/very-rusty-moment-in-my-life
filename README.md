@@ -289,7 +289,7 @@ dist\RustyMoment\RustyMoment.exe
 .venv\Scripts\python.exe -m pytest -q
 ```
 
-**本机实测结果（2026-10-22，Python 3.13.13 / Windows 11 25H2）：`252 passed in 12.99s`**
+**本机实测结果（2026-10-22，Python 3.13.13 / Windows 11 25H2）：`262 passed in 13.66s`**
 
 覆盖范围：
 
@@ -519,6 +519,18 @@ matched  = 命中词数 >= min_hits 且 score > 0
 
 匹配前先做繁转简与标点归一（`text_normalize.py`），大小写可按配置折叠。
 
+**近义说法（aliases）**：每个词条可以带一组近义词，其中任意一个命中都算该词条命中，
+权重仍取词条自身的权重；同一词条命中多个近义词只计一次（不会重复加分）。
+
+```
+配置：「别管我」aliases: 别救我 / 不要救我 / 别理我
+说话：「你们别救我了」→ 命中「别管我」词条（显示为 别救我（≈别管我））
+```
+
+- 配置文件写法：`{"phrase": "别管我", "weight": 1.0, "aliases": ["别救我", "不要救我"]}`
+- 设置页写法：`别管我|1.0|别救我,不要救我`（第三段可省略，逗号/顿号/分号都行）
+- 内置词库已预置常见近义说法；老配置升级到 v3 时会自动补全，但**不会覆盖你自己写的 aliases**。
+
 ### A.3 规则层（`rule_analyzer.py`）
 
 | 分量 | 计算 | 权重（默认） |
@@ -605,5 +617,5 @@ rusty-moment/
 │   ├── utils/logging_setup.py
 │   ├── diagnostics.py          # --check 自检
 │   └── perf_probe.py           # --perf 性能测量
-└── tests/                      # 252 个自动化测试
+└── tests/                      # 262 个自动化测试
 ```
