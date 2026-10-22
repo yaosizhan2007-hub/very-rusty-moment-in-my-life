@@ -289,7 +289,7 @@ dist\RustyMoment\RustyMoment.exe
 .venv\Scripts\python.exe -m pytest -q
 ```
 
-**本机实测结果（2026-10-22，Python 3.13.13 / Windows 11 25H2）：`237 passed in 13.16s`**
+**本机实测结果（2026-10-22，Python 3.13.13 / Windows 11 25H2）：`252 passed in 12.99s`**
 
 覆盖范围：
 
@@ -605,5 +605,5 @@ rusty-moment/
 │   ├── utils/logging_setup.py
 │   ├── diagnostics.py          # --check 自检
 │   └── perf_probe.py           # --perf 性能测量
-└── tests/                      # 232 个自动化测试
+└── tests/                      # 252 个自动化测试
 ```
