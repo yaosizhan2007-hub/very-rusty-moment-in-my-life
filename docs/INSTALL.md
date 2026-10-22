@@ -60,7 +60,7 @@ rmdir /s /q "%APPDATA%\RustyMoment"
 ### 1. 安装
 
 ```bat
-git clone <repo> rusty-moment
+git clone https://github.com/yaosizhan2007-hub/very-rusty-moment-in-my-life.git rusty-moment
 cd rusty-moment
 setup.bat                              :: 建 .venv + 装 requirements.txt
 .venv\Scripts\python.exe main.py       :: 启动

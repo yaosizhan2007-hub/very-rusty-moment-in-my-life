@@ -19,17 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-关于音乐与第三方内容的说明：
-
-本项目不包含、不下载任何音乐文件。《A Rusty Dream》仅作为用户自行指定的
-示例曲目，用户必须使用自己合法获得的本地音频文件。本项目与音乐版权方、
-动画制作方或发行方没有任何官方合作关系。若公开分发，请自行确认所用音乐
-的授权范围。
-
-第三方依赖分别遵循各自的许可证：PySide6 (LGPLv3)、sounddevice (MIT)、
-libsndfile (LGPLv2.1)、PortAudio (MIT)、numpy (BSD-3-Clause)、
-websocket-client (Apache-2.0)、pywin32 (PSF-2.0)、PyInstaller (GPLv2 with
-bootloader exception)。

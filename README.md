@@ -116,7 +116,7 @@
 ### 3.1 开发环境（源码运行）
 
 ```bat
-git clone <repo> rusty-moment
+git clone https://github.com/yaosizhan2007-hub/very-rusty-moment-in-my-life.git rusty-moment
 cd rusty-moment
 setup.bat            :: 创建 .venv 并安装依赖
 run.bat              :: 启动（使用 pythonw，无控制台窗口）
@@ -571,10 +571,11 @@ combined = Σ (w_i / Σw_active) × score_i
 
 ## 15. 版权与分发
 
-- 仓库不含音乐文件，不自动下载音乐，不上传音乐。
+- 仓库不含音乐文件，不自动下载音乐，不上传音乐，`*.mp3` / `*.aac` / `*.wav` 等已在 `.gitignore` 里排除。
 - 用户须自行提供合法获得的音频；公开分发前请自行确认商用/公开发布所需的音乐授权。
-- 第三方依赖遵循各自许可证，详见 `LICENSE`。
-- 本项目与音乐版权方、动画制作方、发行方无任何官方合作关系。
+- 本项目与音乐版权方、动画制作方、发行方无任何官方合作关系，README 里出现的曲名只用于说明「你可以放什么」。
+- 代码采用 **MIT 许可证**，见 `LICENSE`。
+- 第三方依赖遵循各自许可证：PySide6 (LGPLv3)、sounddevice (MIT)、libsndfile (LGPLv2.1)、PortAudio (MIT)、numpy (BSD-3-Clause)、websocket-client (Apache-2.0)、PyAV/FFmpeg (BSD/LGPL)、faster-whisper (MIT)、ctranslate2 (MIT)、onnxruntime (MIT)、httpx (BSD-3-Clause)、pywin32 (PSF-2.0)、PyInstaller (GPLv2 with bootloader exception)。
 
 ---
 
