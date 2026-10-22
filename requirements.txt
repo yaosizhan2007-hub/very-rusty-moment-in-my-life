@@ -1,0 +1,37 @@
+# Rusty Moment - 运行时依赖（Windows 10/11, Python 3.13 实测通过）
+#
+# 已验证的版本组合（2026-10, Python 3.13.13 / Windows 11 25H2）:
+#   PySide6 6.12.0        GUI
+#   sounddevice 0.5.6     PortAudio 封装，播放与麦克风采集
+#   soundfile 0.14.0      libsndfile 1.2.2 -> 支持 WAV / FLAC / OGG / MP3
+#   numpy 2.5.4           音频缓冲
+#   websocket-client 1.9.2 OBS WebSocket 5.x 客户端传输层
+#   pywin32 311           DPAPI 加密存储 OBS 密码 / API Key
+#   pytest 9.1.1          自动化测试
+#   pytest-qt 4.x         GUI 冒烟测试（可选）
+#
+# 阶段 2/3 可选依赖见 requirements-ai.txt（语音识别 / 语义分析）
+
+PySide6>=6.7,<7
+sounddevice>=0.5,<0.6
+soundfile>=0.13,<0.15
+numpy>=1.26
+websocket-client>=1.8,<2
+pywin32>=306; sys_platform == "win32"
+
+# 阶段 2：本地语音识别（可选但推荐；不装则无法启用「检测」页的语音识别）
+# 注意：会连带安装 ctranslate2 / onnxruntime / tokenizers，约 250MB
+faster-whisper>=1.1,<2
+
+# AAC/M4A 解码（PyAV 自带 FFmpeg；faster-whisper 也会依赖它，这里显式声明）
+av>=12,<20
+
+# AI 语义分析（阶段 3）：HTTP 客户端
+httpx>=0.27,<1
+
+# 开发/测试
+pytest>=8.0
+pytest-qt>=4.4
+
+# 打包（仅开发时需要）
+pyinstaller>=6.10

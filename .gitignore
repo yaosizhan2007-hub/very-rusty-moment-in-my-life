@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# 构建产物
+build/
+dist/
+
+# 本地数据（不应提交）
+*.log
+pending_audio_state.json
+self-check.txt
+perf-report.md
+recordings/
+
+# 音乐与音频素材：本项目不包含任何音频文件，避免版权问题
+*.mp3
+*.aac
+*.m4a
+*.flac
+*.wav
+*.ogg
+*.oga
+*.opus
+*.wma
+!tests/fixtures/*.txt

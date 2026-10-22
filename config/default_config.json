@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "audio": {
+    "playlist": [],
+    "current_index": 0,
+    "volume": 0.8,
+    "output_device": "",
+    "play_from_start": true,
+    "allow_repeat": false
+  },
+  "obs": {
+    "host": "127.0.0.1",
+    "port": 4455,
+    "game_source": "桌面音频",
+    "bgm_source": "",
+    "mic_source": "",
+    "auto_reconnect": true,
+    "reconnect_interval_s": 5.0,
+    "control_strategy": "mute",
+    "duck_volume": 0.15,
+    "restore_strategy": "restore_original",
+    "control_enabled": true
+  },
+  "mode": {
+    "current": "serious",
+    "auto_trigger_enabled": true,
+    "global_mute": false
+  },
+  "trigger": {
+    "cooldown_seconds": 30.0,
+    "trigger_threshold": 0.6,
+    "low_confidence_threshold": 0.35,
+    "min_voice_seconds": 0.8,
+    "dedupe_window_seconds": 8.0,
+    "ai_timeout_seconds": 4.0,
+    "max_event_seconds": 300.0,
+    "busy_policy": "ignore",
+    "weights": {
+      "ai": 0.55,
+      "keyword": 0.3,
+      "rule": 0.15
+    },
+    "probabilities": {
+      "serious": 1.0,
+      "low_confidence": 0.35,
+      "chaotic": 0.5,
+      "chaotic_low_score": 0.2,
+      "ai_unavailable": 0.6
+    }
+  },
+  "keywords": {
+    "enabled": true,
+    "min_hits": 1,
+    "case_sensitive": false,
+    "positives": [
+      { "phrase": "别管我", "weight": 1.0 },
+      { "phrase": "你们快走", "weight": 1.0 },
+      { "phrase": "快走", "weight": 0.5 },
+      { "phrase": "我来拖住", "weight": 1.0 },
+      { "phrase": "拖住他们", "weight": 0.8 },
+      { "phrase": "我尽力了", "weight": 1.0 },
+      { "phrase": "替我报仇", "weight": 1.0 },
+      { "phrase": "我撑不住了", "weight": 0.9 },
+      { "phrase": "至少我做到了", "weight": 0.8 },
+      { "phrase": "照顾好我妈", "weight": 1.0 },
+      { "phrase": "不要管我", "weight": 1.0 },
+      { "phrase": "这次真的要走了", "weight": 0.7 }
+    ],
+    "exclusions": [
+      { "phrase": "别管我吃什么", "weight": 1.0 },
+      { "phrase": "别管我睡觉", "weight": 1.0 },
+      { "phrase": "我尽力了但是", "weight": 0.5 },
+      { "phrase": "开玩笑", "weight": 1.0 },
+      { "phrase": "哈哈", "weight": 0.6 },
+      { "phrase": "笑死", "weight": 0.6 },
+      { "phrase": "队友呢", "weight": 0.4 }
+    ]
+  },
+  "rules": {
+    "enabled": true,
+    "weights": {
+      "speech_duration": 0.25,
+      "pause_after": 0.25,
+      "volume_drop": 0.2,
+      "volume_spike": 0.1,
+      "silence_after": 0.2
+    },
+    "speech_duration_full_score_s": 4.0,
+    "long_pause_s": 1.2,
+    "volume_drop_ratio": 0.5
+  },
+  "ai": {
+    "enabled": false,
+    "backend": "none",
+    "model": "",
+    "base_url": "",
+    "timeout_seconds": 4.0,
+    "max_context": 3,
+    "system_prompt": ""
+  },
+  "mic": {
+    "enabled": false,
+    "device": "",
+    "sample_rate": 16000,
+    "save_raw_audio": false,
+    "vad_sensitivity": 0.5
+  },
+  "stt": {
+    "enabled": false,
+    "backend": "none",
+    "model_size": "small",
+    "language": "zh",
+    "model_dir": "",
+    "compute_type": "int8",
+    "initial_prompt": "以下是普通话的句子。"
+  },
+  "privacy": {
+    "cloud_consent": false,
+    "store_transcripts": false,
+    "log_transcripts": false,
+    "show_transcript_in_ui": true
+  },
+  "hotkeys": {
+    "enabled": true,
+    "force_trigger": "F8",
+    "stop_music": "F9",
+    "toggle_auto": "F10",
+    "global_enabled": false
+  },
+  "logging": {
+    "level": "INFO",
+    "dir": "",
+    "max_entries": 200
+  }
+}
