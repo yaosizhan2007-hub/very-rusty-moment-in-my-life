@@ -1,0 +1,841 @@
+{
+  "entries": [
+    {
+      "id": "sac_001",
+      "canonical_phrase": "你们先走，我断后",
+      "variants": [
+        "你们先撤，我来断后",
+        "你们走，我留下",
+        "我先顶着，你们撤"
+      ],
+      "category": "sacrifice",
+      "weight": 0.98,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat",
+        "farewell"
+      ],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "sac_002",
+      "canonical_phrase": "别管我，快走",
+      "variants": [
+        "别管我了你们跑",
+        "不用管我，快撤",
+        "别救我，你们走"
+      ],
+      "category": "sacrifice",
+      "weight": 0.98,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "sac_003",
+      "canonical_phrase": "我来拖住他们",
+      "variants": [
+        "我拖住他们，你们撤",
+        "我把他们缠住",
+        "我先进去拖住"
+      ],
+      "category": "sacrifice",
+      "weight": 0.96,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.4
+    },
+    {
+      "id": "sac_004",
+      "canonical_phrase": "替我报仇",
+      "variants": [
+        "帮我报仇",
+        "记得替我报仇",
+        "给我报仇啊兄弟们"
+      ],
+      "category": "sacrifice",
+      "weight": 0.95,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death",
+        "farewell"
+      ],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "sac_005",
+      "canonical_phrase": "这次换我保护你",
+      "variants": [
+        "这回我保护你",
+        "换我护着你了",
+        "这次我来护你"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "sac_006",
+      "canonical_phrase": "告诉他们我没有逃跑",
+      "variants": [
+        "告诉他们我没跑",
+        "跟他们说我不是逃兵",
+        "告诉他们我顶住了"
+      ],
+      "category": "sacrifice",
+      "weight": 0.92,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death",
+        "farewell"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "sac_007",
+      "canonical_phrase": "至少这一次，让我来",
+      "variants": [
+        "这次让我来",
+        "就这一次我上",
+        "至少这次我来"
+      ],
+      "category": "sacrifice",
+      "weight": 0.88,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "sac_008",
+      "canonical_phrase": "如果我回不去了",
+      "variants": [
+        "我要是回不去",
+        "万一我回不来",
+        "我可能回不去了"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "sac_009",
+      "canonical_phrase": "你们撤，我掩护",
+      "variants": [
+        "你们撤我掩护",
+        "我掩护你们撤",
+        "撤退，我断后"
+      ],
+      "category": "sacrifice",
+      "weight": 0.96,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.4
+    },
+    {
+      "id": "sac_010",
+      "canonical_phrase": "我给你们争取时间",
+      "variants": [
+        "我给你们拖时间",
+        "我帮你们拖一下",
+        "我争取几秒"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat",
+        "objective"
+      ],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.4
+    },
+    {
+      "id": "sac_011",
+      "canonical_phrase": "这里交给我",
+      "variants": [
+        "这里我来",
+        "这块交给我",
+        "这波我上"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "sac_012",
+      "canonical_phrase": "你先走，我随后就到",
+      "variants": [
+        "你先走我马上来",
+        "你走，我跟上"
+      ],
+      "category": "sacrifice",
+      "weight": 0.72,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "sac_013",
+      "canonical_phrase": "我垫后",
+      "variants": [
+        "我来垫后",
+        "我最后走",
+        "我压后"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "sac_014",
+      "canonical_phrase": "别回头，往前跑",
+      "variants": [
+        "别回头，快跑",
+        "一直往前，别回头",
+        "别看我，跑"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "sac_015",
+      "canonical_phrase": "我把他们引开",
+      "variants": [
+        "我去引开他们",
+        "我把人拉走",
+        "我吸引火力"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "sac_016",
+      "canonical_phrase": "我用命换你",
+      "variants": [
+        "我用命换你这条命",
+        "我拿命换",
+        "用我换你"
+      ],
+      "category": "sacrifice",
+      "weight": 0.92,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "sac_017",
+      "canonical_phrase": "让我来挡这一下",
+      "variants": [
+        "我来挡",
+        "让我挡",
+        "我挡这一下"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "sac_018",
+      "canonical_phrase": "我顶住，你们输出",
+      "variants": [
+        "我顶你们打",
+        "我扛住，你们输出",
+        "我顶前面你们打"
+      ],
+      "category": "sacrifice",
+      "weight": 0.88,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.4
+    },
+    {
+      "id": "sac_019",
+      "canonical_phrase": "剩下交给我",
+      "variants": [
+        "剩下的我来",
+        "其余我来处理"
+      ],
+      "category": "sacrifice",
+      "weight": 0.82,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "sac_020",
+      "canonical_phrase": "我这波必死",
+      "variants": [
+        "这波我必死",
+        "我这次活不了",
+        "我这个位置要死"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "death"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "sac_021",
+      "canonical_phrase": "我这条命不值钱",
+      "variants": [
+        "我的命不值钱",
+        "我死了没关系",
+        "我这条命便宜"
+      ],
+      "category": "sacrifice",
+      "weight": 0.8,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "farewell"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.75
+    },
+    {
+      "id": "sac_022",
+      "canonical_phrase": "用我换他，值了",
+      "variants": [
+        "换他我值了",
+        "用我换他划算",
+        "拿我换他"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "sac_023",
+      "canonical_phrase": "我冲了，你们跟上",
+      "variants": [
+        "我上了你们跟",
+        "我先冲"
+      ],
+      "category": "sacrifice",
+      "weight": 0.7,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "sac_024",
+      "canonical_phrase": "我卖一波，你们收",
+      "variants": [
+        "我卖你们收",
+        "我去卖一波",
+        "我骗一波技能"
+      ],
+      "category": "sacrifice",
+      "weight": 0.78,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "sac_025",
+      "canonical_phrase": "我挡枪",
+      "variants": [
+        "我来挡枪",
+        "我给他挡枪",
+        "我挡子弹"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "sac_026",
+      "canonical_phrase": "我架枪，你们走",
+      "variants": [
+        "我架着你们走",
+        "我架枪掩护",
+        "我架住，你们撤"
+      ],
+      "category": "sacrifice",
+      "weight": 0.8,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.4
+    },
+    {
+      "id": "sac_027",
+      "canonical_phrase": "我在门口守着",
+      "variants": [
+        "我守在门口",
+        "我守门口",
+        "门口我看着"
+      ],
+      "category": "sacrifice",
+      "weight": 0.72,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "objective",
+        "combat"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "sac_028",
+      "canonical_phrase": "我守到最后一个人",
+      "variants": [
+        "我守到最后一个",
+        "我一直守到最后",
+        "最后一人我来守"
+      ],
+      "category": "sacrifice",
+      "weight": 0.88,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "farewell"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "sac_029",
+      "canonical_phrase": "我不走了，你们走",
+      "variants": [
+        "我不走了",
+        "你们走吧，我留下",
+        "我不撤了"
+      ],
+      "category": "sacrifice",
+      "weight": 0.92,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "sac_030",
+      "canonical_phrase": "我留下看家",
+      "variants": [
+        "我看家",
+        "我留下来看家",
+        "我留守"
+      ],
+      "category": "sacrifice",
+      "weight": 0.65,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "objective"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "sac_031",
+      "canonical_phrase": "我拿命去换",
+      "variants": [
+        "拿命换",
+        "我拿命拼",
+        "我豁出去了"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "death"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "sac_032",
+      "canonical_phrase": "我给你们开条路",
+      "variants": [
+        "我给你们开路",
+        "我开条道",
+        "我把路打开"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "sac_033",
+      "canonical_phrase": "我挡在前面",
+      "variants": [
+        "我在前面挡",
+        "我站前面挡",
+        "我挡最前面"
+      ],
+      "category": "sacrifice",
+      "weight": 0.88,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.4
+    },
+    {
+      "id": "sac_034",
+      "canonical_phrase": "我倒下了你们别管",
+      "variants": [
+        "我倒地了别管我",
+        "我倒了你们走",
+        "我躺了别来救"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "sac_035",
+      "canonical_phrase": "我用身体挡子弹",
+      "variants": [
+        "我拿身体挡",
+        "我顶子弹"
+      ],
+      "category": "sacrifice",
+      "weight": 0.82,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.65
+    },
+    {
+      "id": "sac_036",
+      "canonical_phrase": "我来做诱饵",
+      "variants": [
+        "我当诱饵",
+        "我做饵",
+        "我去钓他们"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "sac_037",
+      "canonical_phrase": "我拖延一下",
+      "variants": [
+        "我拖延几秒",
+        "我拖一会儿",
+        "我延缓一下"
+      ],
+      "category": "sacrifice",
+      "weight": 0.78,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "sac_038",
+      "canonical_phrase": "后面交给我",
+      "variants": [
+        "后面我来",
+        "后方我守",
+        "后面我盯着"
+      ],
+      "category": "sacrifice",
+      "weight": 0.8,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "sac_039",
+      "canonical_phrase": "我一个人顶就行",
+      "variants": [
+        "我一个人顶得住",
+        "我一个就够",
+        "我自己扛"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "sac_040",
+      "canonical_phrase": "我换掉他",
+      "variants": [
+        "我一换一",
+        "我把人换掉",
+        "我换他一条命"
+      ],
+      "category": "sacrifice",
+      "weight": 0.82,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "teammate"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5
+    }
+  ]
+}

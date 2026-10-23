@@ -1,0 +1,954 @@
+{
+  "entries": [
+    {
+      "id": "def_001",
+      "canonical_phrase": "这把没了",
+      "variants": [
+        "这局没了",
+        "这一把没了",
+        "这波没了啊"
+      ],
+      "category": "defeat",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "def_002",
+      "canonical_phrase": "我倒了，别救",
+      "variants": [
+        "我倒了，不用救",
+        "我倒地了别救",
+        "我趴了，别来"
+      ],
+      "category": "defeat",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "teammate"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "def_003",
+      "canonical_phrase": "没子弹了",
+      "variants": [
+        "子弹打完了",
+        "没子弹了啊",
+        "弹夹空了"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "low_hp"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "def_004",
+      "canonical_phrase": "我撑不住了",
+      "variants": [
+        "我真的撑不住",
+        "撑不住了",
+        "我快撑不住了"
+      ],
+      "category": "defeat",
+      "weight": 0.95,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "death"
+      ],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "def_005",
+      "canonical_phrase": "原来是这样吗",
+      "variants": [
+        "原来是这样",
+        "原来是这个意思",
+        "原来是这么回事"
+      ],
+      "category": "defeat",
+      "weight": 0.82,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "farewell"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.85
+    },
+    {
+      "id": "def_006",
+      "canonical_phrase": "所以这就是结局",
+      "variants": [
+        "这就是结局吧",
+        "原来这就是结局",
+        "结局就是这样"
+      ],
+      "category": "defeat",
+      "weight": 0.88,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "farewell"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.8
+    },
+    {
+      "id": "def_007",
+      "canonical_phrase": "我就知道会这样",
+      "variants": [
+        "我就知道会输",
+        "早就知道会这样",
+        "果然是这样"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.65
+    },
+    {
+      "id": "def_008",
+      "canonical_phrase": "我顶不住了",
+      "variants": [
+        "顶不住了",
+        "我真的顶不住",
+        "我顶不住了兄弟"
+      ],
+      "category": "defeat",
+      "weight": 0.88,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "def_009",
+      "canonical_phrase": "我不行了",
+      "variants": [
+        "我真的不行了",
+        "不行了",
+        "我不行了啊"
+      ],
+      "category": "defeat",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "death"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "def_010",
+      "canonical_phrase": "这波输定了",
+      "variants": [
+        "这波必输",
+        "这把输定了",
+        "输定了这波"
+      ],
+      "category": "defeat",
+      "weight": 0.82,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "def_011",
+      "canonical_phrase": "打不过了",
+      "variants": [
+        "真打不过",
+        "打不过他们",
+        "正面打不过"
+      ],
+      "category": "defeat",
+      "weight": 0.78,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "def_012",
+      "canonical_phrase": "守不住了",
+      "variants": [
+        "这守不住了",
+        "守不住了兄弟",
+        "点守不住了"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "objective"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "def_013",
+      "canonical_phrase": "没救了",
+      "variants": [
+        "救不了了",
+        "已经没救了",
+        "没得救了"
+      ],
+      "category": "defeat",
+      "weight": 0.75,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "death"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "def_014",
+      "canonical_phrase": "已经结束了",
+      "variants": [
+        "结束了",
+        "就已经结束了",
+        "都结束了"
+      ],
+      "category": "defeat",
+      "weight": 0.78,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "def_015",
+      "canonical_phrase": "全灭了",
+      "variants": [
+        "全灭",
+        "我们全灭了",
+        "团灭了"
+      ],
+      "category": "defeat",
+      "weight": 0.82,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "death"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "def_016",
+      "canonical_phrase": "一波带走",
+      "variants": [
+        "被一波带走",
+        "一波被带走",
+        "直接一波"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "def_017",
+      "canonical_phrase": "我们输了",
+      "variants": [
+        "这把输了",
+        "输了这把",
+        "我们输了啊"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "def_018",
+      "canonical_phrase": "打不动了",
+      "variants": [
+        "真的打不动",
+        "打不动了啊",
+        "没劲打了"
+      ],
+      "category": "defeat",
+      "weight": 0.75,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "def_019",
+      "canonical_phrase": "我认输",
+      "variants": [
+        "认输了",
+        "我投降"
+      ],
+      "category": "defeat",
+      "weight": 0.75,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "def_020",
+      "canonical_phrase": "我放弃了",
+      "variants": [
+        "我放弃了这把",
+        "放弃治疗了",
+        "我放弃"
+      ],
+      "category": "defeat",
+      "weight": 0.82,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "def_021",
+      "canonical_phrase": "不打了，投了",
+      "variants": [
+        "不打了，投吧",
+        "打不下去，投",
+        "直接投了"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "def_022",
+      "canonical_phrase": "我崩了",
+      "variants": [
+        "我真的崩了",
+        "心态崩了",
+        "我整个崩了"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "def_023",
+      "canonical_phrase": "我麻了",
+      "variants": [
+        "我人麻了",
+        "已经麻了",
+        "我麻了真的"
+      ],
+      "category": "defeat",
+      "weight": 0.6,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.75
+    },
+    {
+      "id": "def_024",
+      "canonical_phrase": "没办法了",
+      "variants": [
+        "真没办法了",
+        "一点办法都没有",
+        "没办法了啊"
+      ],
+      "category": "defeat",
+      "weight": 0.72,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "def_025",
+      "canonical_phrase": "就这样吧",
+      "variants": [
+        "那就这样吧",
+        "就这样了啊",
+        "就这样了"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "def_026",
+      "canonical_phrase": "输麻了",
+      "variants": [
+        "已经输麻了",
+        "输到麻了",
+        "我输麻了"
+      ],
+      "category": "defeat",
+      "weight": 0.65,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.8
+    },
+    {
+      "id": "def_027",
+      "canonical_phrase": "我身体被压住了",
+      "variants": [
+        "我被压住了",
+        "身体卡住了",
+        "我起不来了"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "death"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "def_028",
+      "canonical_phrase": "已经没机会了",
+      "variants": [
+        "没机会了",
+        "机会都没了",
+        "我们没机会了"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "def_029",
+      "canonical_phrase": "我这波失误了",
+      "variants": [
+        "我失误了",
+        "这波是我失误",
+        "我的锅"
+      ],
+      "category": "defeat",
+      "weight": 0.6,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "def_030",
+      "canonical_phrase": "全崩了",
+      "variants": [
+        "我们全崩了",
+        "整个崩盘",
+        "全线崩了"
+      ],
+      "category": "defeat",
+      "weight": 0.78,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "def_031",
+      "canonical_phrase": "我们守不下来了",
+      "variants": [
+        "守不下来了",
+        "这波守不下来",
+        "点我们守不住了"
+      ],
+      "category": "defeat",
+      "weight": 0.82,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "objective"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "def_032",
+      "canonical_phrase": "我血不多了",
+      "variants": [
+        "血不多了",
+        "我血量很低",
+        "我就一点血"
+      ],
+      "category": "defeat",
+      "weight": 0.65,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "low_hp",
+        "combat"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "def_033",
+      "canonical_phrase": "我是最后一个了",
+      "variants": [
+        "就剩我一个了",
+        "只剩我一个",
+        "最后一个是我"
+      ],
+      "category": "defeat",
+      "weight": 0.88,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "farewell"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.65
+    },
+    {
+      "id": "def_034",
+      "canonical_phrase": "队友都死了",
+      "variants": [
+        "队友全死了",
+        "他们都没了",
+        "就剩我了"
+      ],
+      "category": "defeat",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "teammate"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "def_035",
+      "canonical_phrase": "完了完了",
+      "variants": [
+        "完了呀",
+        "这下完了",
+        "完了完了完了"
+      ],
+      "category": "defeat",
+      "weight": 0.6,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "def_036",
+      "canonical_phrase": "该结束了",
+      "variants": [
+        "是时候结束了",
+        "该收场了",
+        "该结束了兄弟"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.75
+    },
+    {
+      "id": "def_037",
+      "canonical_phrase": "我掉下去了",
+      "variants": [
+        "我掉坑里了",
+        "我掉下去了啊",
+        "我摔下去了"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "combat"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "def_038",
+      "canonical_phrase": "跑不掉了",
+      "variants": [
+        "跑不掉了兄弟",
+        "走不掉了",
+        "我们跑不掉"
+      ],
+      "category": "defeat",
+      "weight": 0.78,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "min_confidence": 0.68,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "def_039",
+      "canonical_phrase": "我被包围了",
+      "variants": [
+        "我被人围了",
+        "他们把我围住",
+        "我被包了"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "death"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "def_040",
+      "canonical_phrase": "出不去了",
+      "variants": [
+        "门口被封了",
+        "根本出不去",
+        "出不去啊"
+      ],
+      "category": "defeat",
+      "weight": 0.78,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "def_041",
+      "canonical_phrase": "一滴血都没有了",
+      "variants": [
+        "血见底了",
+        "血条空了",
+        "我一点血都没了"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "low_hp",
+        "death"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "def_042",
+      "canonical_phrase": "该认命了",
+      "variants": [
+        "认命吧",
+        "该认命了兄弟",
+        "只能认命"
+      ],
+      "category": "defeat",
+      "weight": 0.82,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.75
+    },
+    {
+      "id": "def_043",
+      "canonical_phrase": "我这边要塌了",
+      "variants": [
+        "这边塌了",
+        "我这块要崩",
+        "我这边守不住"
+      ],
+      "category": "defeat",
+      "weight": 0.75,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "objective"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "def_044",
+      "canonical_phrase": "我们被打散了",
+      "variants": [
+        "队伍被打散",
+        "我们都散了",
+        "阵型散了"
+      ],
+      "category": "defeat",
+      "weight": 0.72,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "teammate"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "def_045",
+      "canonical_phrase": "这一把打得太难了",
+      "variants": [
+        "这把太难打了",
+        "实在打不动这把",
+        "太难了这把"
+      ],
+      "category": "defeat",
+      "weight": 0.66,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "def_046",
+      "canonical_phrase": "算了不打了",
+      "variants": [
+        "我不想打了",
+        "不打了不打了",
+        "算了，打不了了"
+      ],
+      "category": "defeat",
+      "weight": 0.75,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7
+    }
+  ]
+}

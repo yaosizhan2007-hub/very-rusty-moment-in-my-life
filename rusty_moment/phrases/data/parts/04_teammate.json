@@ -1,0 +1,840 @@
+{
+  "entries": [
+    {
+      "id": "tea_001",
+      "canonical_phrase": "兄弟，你走吧",
+      "variants": [
+        "兄弟你走",
+        "你走吧兄弟",
+        "老哥你先走"
+      ],
+      "category": "teammate",
+      "weight": 0.95,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "tea_002",
+      "canonical_phrase": "不用管我，赢下这把",
+      "variants": [
+        "别管我，赢下来",
+        "不用管我，赢",
+        "你们赢了就行"
+      ],
+      "category": "teammate",
+      "weight": 0.95,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "objective"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "tea_003",
+      "canonical_phrase": "装备给你了",
+      "variants": [
+        "我装备都给你",
+        "东西给你了",
+        "我这点家当都给你"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "tea_004",
+      "canonical_phrase": "你们一定要赢",
+      "variants": [
+        "一定得赢啊",
+        "你们必须赢",
+        "赢下这一把"
+      ],
+      "category": "teammate",
+      "weight": 0.92,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "objective"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "tea_005",
+      "canonical_phrase": "兄弟，下次再一起玩",
+      "variants": [
+        "兄弟下把还一起",
+        "下次还找你玩",
+        "有缘再一起打"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "tea_006",
+      "canonical_phrase": "你先活下去",
+      "variants": [
+        "你要活下来",
+        "你得活着",
+        "你活着就行"
+      ],
+      "category": "teammate",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "min_confidence": 0.58,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "tea_007",
+      "canonical_phrase": "别浪费我的牺牲",
+      "variants": [
+        "别让我白死",
+        "我这条命别白费",
+        "别浪费我这次"
+      ],
+      "category": "teammate",
+      "weight": 0.92,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.65
+    },
+    {
+      "id": "tea_008",
+      "canonical_phrase": "你们别回头",
+      "variants": [
+        "都别回头",
+        "别回头看",
+        "不要回头看我"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "tea_009",
+      "canonical_phrase": "快走，别问",
+      "variants": [
+        "先走，别问了",
+        "快走别问那么多",
+        "走，别管"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "tea_010",
+      "canonical_phrase": "记住我说的话",
+      "variants": [
+        "记住我说过的",
+        "我刚说的你记住",
+        "记住我的话"
+      ],
+      "category": "teammate",
+      "weight": 0.8,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.68,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "tea_011",
+      "canonical_phrase": "你们打，我看着",
+      "variants": [
+        "你们打就行",
+        "我看着你们打",
+        "剩下的你们打"
+      ],
+      "category": "teammate",
+      "weight": 0.7,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "tea_012",
+      "canonical_phrase": "我帮你顶一下",
+      "variants": [
+        "我帮你扛一下",
+        "我帮你挡一下",
+        "我替你顶"
+      ],
+      "category": "teammate",
+      "weight": 0.82,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "tea_013",
+      "canonical_phrase": "交给你了兄弟",
+      "variants": [
+        "交给你了老哥",
+        "这里交给你",
+        "后面交给你了"
+      ],
+      "category": "teammate",
+      "weight": 0.8,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "tea_014",
+      "canonical_phrase": "你先救他",
+      "variants": [
+        "先救他别救我",
+        "去救他，我没事",
+        "救他先"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "tea_015",
+      "canonical_phrase": "别救我，救他",
+      "variants": [
+        "不用救我，救他",
+        "救我干嘛，救他",
+        "别管我，先救他"
+      ],
+      "category": "teammate",
+      "weight": 0.92,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "tea_016",
+      "canonical_phrase": "他能救，我不行",
+      "variants": [
+        "他还有救，我没有",
+        "救他吧，我救不了",
+        "别在我这浪费"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tea_017",
+      "canonical_phrase": "你还有机会，我没有",
+      "variants": [
+        "你还能打，我不行了",
+        "你还有机会",
+        "机会留给你的"
+      ],
+      "category": "teammate",
+      "weight": 0.88,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tea_018",
+      "canonical_phrase": "你们撤，我留下",
+      "variants": [
+        "你们撤我在这",
+        "我留下，你们撤"
+      ],
+      "category": "teammate",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.58,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "tea_019",
+      "canonical_phrase": "帮我挡一下",
+      "variants": [
+        "帮我挡一下兄弟",
+        "给我挡一下",
+        "帮我拦一下"
+      ],
+      "category": "teammate",
+      "weight": 0.72,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.4
+    },
+    {
+      "id": "tea_020",
+      "canonical_phrase": "我掩护你，快走",
+      "variants": [
+        "我掩护你快跑",
+        "我掩护，你走",
+        "你走我掩护"
+      ],
+      "category": "teammate",
+      "weight": 0.88,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.58,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "tea_021",
+      "canonical_phrase": "你先跑，我断",
+      "variants": [
+        "你先跑我断后",
+        "你跑我断",
+        "你先撤，我断"
+      ],
+      "category": "teammate",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.58,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "tea_022",
+      "canonical_phrase": "兄弟，替我活下去",
+      "variants": [
+        "你替我活下去",
+        "替我好好活着",
+        "你得替我们活下去"
+      ],
+      "category": "teammate",
+      "weight": 0.95,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death",
+        "farewell"
+      ],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tea_023",
+      "canonical_phrase": "你们好好打",
+      "variants": [
+        "你们好好打啊",
+        "好好打，别管我",
+        "认真打"
+      ],
+      "category": "teammate",
+      "weight": 0.82,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "tea_024",
+      "canonical_phrase": "帮我带句话给她",
+      "variants": [
+        "帮我带句话",
+        "替我带句话给她",
+        "有句话你帮我带"
+      ],
+      "category": "teammate",
+      "weight": 0.88,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.75
+    },
+    {
+      "id": "tea_025",
+      "canonical_phrase": "我这边没事，你们打",
+      "variants": [
+        "我这边还行，你们打",
+        "我没事，你们继续",
+        "我撑得住，你们打"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "tea_026",
+      "canonical_phrase": "我这边别管",
+      "variants": [
+        "我这边你们别管",
+        "别管我这边",
+        "这边不用管我"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "tea_027",
+      "canonical_phrase": "我顶一会儿，你们先撤",
+      "variants": [
+        "我顶一会儿你们撤",
+        "我撑一会儿，你们走",
+        "我扛一会，你们撤"
+      ],
+      "category": "teammate",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.58,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "tea_028",
+      "canonical_phrase": "我拖住，你们去下包",
+      "variants": [
+        "我拖着，你们下包",
+        "我拖他们，你们装包",
+        "我拖着，你们去拆"
+      ],
+      "category": "teammate",
+      "weight": 0.88,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "objective"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "tea_029",
+      "canonical_phrase": "你们守，我出去换",
+      "variants": [
+        "我出去换一个",
+        "我出去换命",
+        "你们守着，我出去"
+      ],
+      "category": "teammate",
+      "weight": 0.82,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "tea_030",
+      "canonical_phrase": "你拿我的钱",
+      "variants": [
+        "我的钱你拿走",
+        "钱都给你",
+        "我钱留给你"
+      ],
+      "category": "teammate",
+      "weight": 0.75,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.65
+    },
+    {
+      "id": "tea_031",
+      "canonical_phrase": "我不需要救",
+      "variants": [
+        "我不用救",
+        "别给我奶",
+        "我不需要治疗"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.55
+    },
+    {
+      "id": "tea_032",
+      "canonical_phrase": "让我死在这儿",
+      "variants": [
+        "我就死这儿了",
+        "让我死这吧",
+        "我死这挺好"
+      ],
+      "category": "teammate",
+      "weight": 0.88,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "farewell"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.8
+    },
+    {
+      "id": "tea_033",
+      "canonical_phrase": "这里我守着，你们走",
+      "variants": [
+        "这我守着",
+        "这我盯，你们走",
+        "这地方我守"
+      ],
+      "category": "teammate",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "objective"
+      ],
+      "min_confidence": 0.58,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "tea_034",
+      "canonical_phrase": "我最后再帮你一次",
+      "variants": [
+        "最后帮你一次",
+        "我再帮你这一回",
+        "就帮你这最后一次"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tea_035",
+      "canonical_phrase": "你先撤，我收尾",
+      "variants": [
+        "我收尾，你撤",
+        "你撤我收拾",
+        "剩下我收尾"
+      ],
+      "category": "teammate",
+      "weight": 0.82,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.45
+    },
+    {
+      "id": "tea_036",
+      "canonical_phrase": "别哭，我没事",
+      "variants": [
+        "别哭啊我没事",
+        "别哭，我好着呢",
+        "哭什么，我没事"
+      ],
+      "category": "teammate",
+      "weight": 0.88,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.75
+    },
+    {
+      "id": "tea_037",
+      "canonical_phrase": "我这就过去了",
+      "variants": [
+        "我马上就过去",
+        "我这就过去找你",
+        "我过去了啊"
+      ],
+      "category": "teammate",
+      "weight": 0.7,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "tea_038",
+      "canonical_phrase": "后面靠你了",
+      "variants": [
+        "后面靠你了兄弟",
+        "之后靠你",
+        "接下来看你的"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "tea_039",
+      "canonical_phrase": "我信你，你去吧",
+      "variants": [
+        "信你，去吧",
+        "你去吧，我信你",
+        "交给你我放心"
+      ],
+      "category": "teammate",
+      "weight": 0.8,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "min_confidence": 0.68,
+      "comedic_potential": 0.5
+    },
+    {
+      "id": "tea_040",
+      "canonical_phrase": "你带着我的份一起打",
+      "variants": [
+        "带着我那份打",
+        "帮我打下去",
+        "我的份你替我打"
+      ],
+      "category": "teammate",
+      "weight": 0.9,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.7
+    }
+  ]
+}

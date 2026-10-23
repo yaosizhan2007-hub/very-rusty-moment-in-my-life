@@ -20,7 +20,11 @@ a = Analysis(
     [str(ROOT / "main.py")],
     pathex=[str(ROOT)],
     binaries=[],
-    datas=[(str(ROOT / "config" / "default_config.json"), "config")],
+    datas=[
+        (str(ROOT / "config" / "default_config.json"), "config"),
+        # 结构化词库（core_zh.json / rules.json）必须打进包里，否则运行时读不到
+        (str(ROOT / "rusty_moment" / "phrases" / "data"), "rusty_moment/phrases/data"),
+    ],
     hiddenimports=[
         "win32crypt",  # DPAPI 凭据存储
         "websocket",

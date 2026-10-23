@@ -473,6 +473,35 @@ class KeywordsConfig:
 
 
 @dataclass
+class PhrasesConfig:
+    """结构化词库子系统（阶段 2/3 引入）。
+
+    与旧的 ``keywords`` 段并存：``enabled=True`` 时用新词库匹配，
+    关闭后自动退回旧的关键词列表，方便回滚与排障。
+    """
+
+    enabled: bool = True
+    library_path: str = ""
+    """空字符串表示使用内置词库；可指向用户自己的 JSON。"""
+    use_combination_rules: bool = True
+    fuzzy_enabled: bool = True
+    context_window_seconds: float = 15.0
+
+    @classmethod
+    def from_dict(cls, raw: Any, issues: list[str]) -> "PhrasesConfig":
+        raw = raw if isinstance(raw, dict) else {}
+        return cls(
+            enabled=_as_bool(raw.get("enabled", True), True),
+            library_path=_as_str(raw.get("library_path", ""), "").strip(),
+            use_combination_rules=_as_bool(raw.get("use_combination_rules", True), True),
+            fuzzy_enabled=_as_bool(raw.get("fuzzy_enabled", True), True),
+            context_window_seconds=_as_float(
+                raw.get("context_window_seconds", 15.0), 15.0, 1.0, 120.0
+            ),
+        )
+
+
+@dataclass
 class RulesConfig:
     enabled: bool = True
     weights: dict[str, float] = field(
@@ -677,6 +706,7 @@ class AppConfig:
     mode: ModeConfig = field(default_factory=ModeConfig)
     trigger: TriggerConfig = field(default_factory=TriggerConfig)
     keywords: KeywordsConfig = field(default_factory=KeywordsConfig)
+    phrases: PhrasesConfig = field(default_factory=PhrasesConfig)
     rules: RulesConfig = field(default_factory=RulesConfig)
     ai: AIConfig = field(default_factory=AIConfig)
     mic: MicConfig = field(default_factory=MicConfig)
@@ -709,6 +739,7 @@ class AppConfig:
             mode=ModeConfig.from_dict(source.get("mode"), issues),
             trigger=TriggerConfig.from_dict(source.get("trigger"), issues),
             keywords=KeywordsConfig.from_dict(source.get("keywords"), issues),
+            phrases=PhrasesConfig.from_dict(source.get("phrases"), issues),
             rules=RulesConfig.from_dict(source.get("rules"), issues),
             ai=AIConfig.from_dict(source.get("ai"), issues),
             mic=MicConfig.from_dict(source.get("mic"), issues),

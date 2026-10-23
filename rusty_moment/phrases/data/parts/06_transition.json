@@ -1,0 +1,717 @@
+{
+  "entries": [
+    {
+      "id": "tra_001",
+      "canonical_phrase": "没事，真的没事",
+      "variants": [
+        "真没事",
+        "我没事，真的",
+        "没事没事"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "chat"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.75
+    },
+    {
+      "id": "tra_002",
+      "canonical_phrase": "算了，就这样吧",
+      "variants": [
+        "算了就这样",
+        "算了，这样也行",
+        "那就这样吧算了"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.72
+    },
+    {
+      "id": "tra_003",
+      "canonical_phrase": "至少我做到了",
+      "variants": [
+        "至少我做到了这一点",
+        "起码我做到了",
+        "至少这件事我成了"
+      ],
+      "category": "transition",
+      "weight": 0.65,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "objective"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tra_004",
+      "canonical_phrase": "我已经没有选择了",
+      "variants": [
+        "我没得选了",
+        "我没有别的选择",
+        "只能这样了"
+      ],
+      "category": "transition",
+      "weight": 0.62,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tra_005",
+      "canonical_phrase": "那就到这里吧",
+      "variants": [
+        "到这里吧",
+        "就到这里了",
+        "到这吧"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.75
+    },
+    {
+      "id": "tra_006",
+      "canonical_phrase": "这次可能真的不一样",
+      "variants": [
+        "这次真的不一样",
+        "这回不一样了",
+        "可能真的不一样"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tra_007",
+      "canonical_phrase": "没关系的",
+      "variants": [
+        "没关系啦",
+        "没事的",
+        "不要紧"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat",
+        "teammate"
+      ],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "tra_008",
+      "canonical_phrase": "我一个人也没事",
+      "variants": [
+        "我一个人也行",
+        "我自己没事",
+        "一个人也挺好"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "chat"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.72
+    },
+    {
+      "id": "tra_009",
+      "canonical_phrase": "习惯了",
+      "variants": [
+        "我习惯了",
+        "早就习惯了",
+        "都习惯了"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "chat"
+      ],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.8
+    },
+    {
+      "id": "tra_010",
+      "canonical_phrase": "我早就习惯了",
+      "variants": [
+        "我早就习惯这样",
+        "这个我习惯了",
+        "一直都是这样"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.8
+    },
+    {
+      "id": "tra_011",
+      "canonical_phrase": "没什么大不了的",
+      "variants": [
+        "没什么大不了",
+        "这算不了什么",
+        "不算什么"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.65
+    },
+    {
+      "id": "tra_012",
+      "canonical_phrase": "真的没关系",
+      "variants": [
+        "真没关系",
+        "一点都没关系"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.65
+    },
+    {
+      "id": "tra_013",
+      "canonical_phrase": "说不难过是假的",
+      "variants": [
+        "说不难受是假的",
+        "怎么可能不难过",
+        "说不心疼是假的"
+      ],
+      "category": "transition",
+      "weight": 0.65,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat",
+        "farewell"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.8
+    },
+    {
+      "id": "tra_014",
+      "canonical_phrase": "我其实还好",
+      "variants": [
+        "我还好啦",
+        "我其实还行",
+        "还好吧我"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.65
+    },
+    {
+      "id": "tra_015",
+      "canonical_phrase": "就是有点累",
+      "variants": [
+        "有点累了",
+        "我就是有点累",
+        "累了"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tra_016",
+      "canonical_phrase": "没人会记得吧",
+      "variants": [
+        "应该没人记得",
+        "也没人会记得",
+        "谁还记得呢"
+      ],
+      "category": "transition",
+      "weight": 0.62,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.85
+    },
+    {
+      "id": "tra_017",
+      "canonical_phrase": "反正也没人管",
+      "variants": [
+        "也没人管我",
+        "没人在乎",
+        "反正没人管"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.8
+    },
+    {
+      "id": "tra_018",
+      "canonical_phrase": "我已经很努力了",
+      "variants": [
+        "我很努力了",
+        "我已经够努力",
+        "我真的努力了"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "tra_019",
+      "canonical_phrase": "我不是不难过",
+      "variants": [
+        "我怎么可能不难过",
+        "不是不难过",
+        "我也会难过"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat",
+        "farewell"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.8
+    },
+    {
+      "id": "tra_020",
+      "canonical_phrase": "只是有点不甘心",
+      "variants": [
+        "就是有点不甘心",
+        "不太甘心",
+        "有点不甘"
+      ],
+      "category": "transition",
+      "weight": 0.62,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.75
+    },
+    {
+      "id": "tra_021",
+      "canonical_phrase": "就这样结束也挺好",
+      "variants": [
+        "这样结束也不错",
+        "这么结束也挺好",
+        "就这样收尾也行"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.8
+    },
+    {
+      "id": "tra_022",
+      "canonical_phrase": "该做的都做了",
+      "variants": [
+        "能做的都做了",
+        "该做的我做了",
+        "我该做的都做了"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "defeat"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tra_023",
+      "canonical_phrase": "我不怪你们",
+      "variants": [
+        "不怪你们",
+        "我不怨你们",
+        "别觉得我怪你们"
+      ],
+      "category": "transition",
+      "weight": 0.62,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.72
+    },
+    {
+      "id": "tra_024",
+      "canonical_phrase": "别自责",
+      "variants": [
+        "别自己扛",
+        "不要自责",
+        "你们别内疚"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "tra_025",
+      "canonical_phrase": "这不是你们的错",
+      "variants": [
+        "不是你们的错",
+        "这跟你们没关系",
+        "别怪自己"
+      ],
+      "category": "transition",
+      "weight": 0.62,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tra_026",
+      "canonical_phrase": "我认了",
+      "variants": [
+        "这次我认了",
+        "我认了行吧",
+        "认了吧"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tra_027",
+      "canonical_phrase": "我也该走了",
+      "variants": [
+        "我该走了",
+        "是时候该走了",
+        "我差不多该走"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tra_028",
+      "canonical_phrase": "差不多该收工了",
+      "variants": [
+        "该收工了",
+        "今天到这儿",
+        "收工吧"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.65
+    },
+    {
+      "id": "tra_029",
+      "canonical_phrase": "以后你们自己小心",
+      "variants": [
+        "你们以后小心点",
+        "之后自己注意",
+        "往后自己多小心"
+      ],
+      "category": "transition",
+      "weight": 0.62,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tra_030",
+      "canonical_phrase": "我真的没事",
+      "variants": [
+        "我真没事",
+        "没事，我好着呢",
+        "我没事啊"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.75
+    },
+    {
+      "id": "tra_031",
+      "canonical_phrase": "没什么好说的",
+      "variants": [
+        "没什么可说的",
+        "也没啥好说的",
+        "无话可说"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tra_032",
+      "canonical_phrase": "都过去了",
+      "variants": [
+        "已经过去了",
+        "过去就过去了",
+        "都过去啦"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat",
+        "farewell"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tra_033",
+      "canonical_phrase": "我已经很满足了",
+      "variants": [
+        "我很满足了",
+        "这些我已经满足",
+        "我挺满足的"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.7
+    },
+    {
+      "id": "tra_034",
+      "canonical_phrase": "这样也好",
+      "variants": [
+        "这样也行",
+        "这样也挺好",
+        "这样吧"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.6
+    },
+    {
+      "id": "tra_035",
+      "canonical_phrase": "我没什么想说的了",
+      "variants": [
+        "我没什么要说的",
+        "我说完了",
+        "我没别的想说了"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.7
+    }
+  ]
+}

@@ -19,7 +19,7 @@ import time
 from collections import deque
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Callable
+from typing import Any, Callable
 
 from ..config.config_manager import AppConfig
 from ..core.state_machine import EventState, StateMachine
@@ -71,6 +71,9 @@ class DetectionPipeline:
         on_status: Callable[[DetectionStatus], None] | None = None,
         on_trigger: Callable[[TriggerDecision, CandidateEvent], None] | None = None,
         clock: Callable[[], float] = time.monotonic,
+        phrase_matcher: Any = None,
+        rule_engine: Any = None,
+        context_tracker: Any = None,
     ) -> None:
         self._config = config_provider
         self._capture = capture
@@ -83,6 +86,10 @@ class DetectionPipeline:
         self._on_status = on_status
         self._on_trigger = on_trigger
         self._clock = clock
+        # 结构化词库（阶段 3）：为空时自动退回旧的关键词匹配
+        self._phrase_matcher = phrase_matcher
+        self._rule_engine = rule_engine
+        self._context = context_tracker
 
         self._thread: threading.Thread | None = None
         self._stop = threading.Event()
@@ -218,8 +225,30 @@ class DetectionPipeline:
 
         keyword: KeywordResult | None = None
         rule: RuleResult | None = None
-        if cfg.keywords.enabled:
-            keyword = self._keywords.analyze(text)
+        rule_delta = 0.0
+        rule_reasons: list[str] = []
+        phrase_result = None
+        if cfg.keywords.enabled and text:
+            if self._phrase_matcher is not None and getattr(cfg, "phrases", None) is not None and cfg.phrases.enabled:
+                # 新路径：结构化词库 + 组合规则
+                phrase_result = self._phrase_matcher.analyze(text, mode=cfg.mode.current)
+                keyword = phrase_result  # 与 KeywordResult 接口兼容（score/hits/matched）
+                if self._rule_engine is not None and cfg.phrases.use_combination_rules:
+                    outcome = self._rule_engine.evaluate(
+                        mode=cfg.mode.current, phrase=phrase_result, context=self._context
+                    )
+                    rule_delta = outcome.total_delta
+                    rule_reasons = [match.describe() for match in outcome.matches]
+                if self._context is not None:
+                    self._context.record(
+                        text=text,
+                        categories=phrase_result.categories,
+                        tags=phrase_result.tags,
+                        entry_ids=[hit.entry_id for hit in phrase_result.hits],
+                        score=phrase_result.score,
+                    )
+            else:
+                keyword = self._keywords.analyze(text)
         if cfg.rules.enabled:
             rule = self._rules.analyze(utterance.features)
 
@@ -255,6 +284,8 @@ class DetectionPipeline:
             ai_error=ai_error or transcript_error,
             transcript_source=cfg.stt.backend if cfg.stt.enabled else "none",
             at=self._clock(),
+            rule_delta=rule_delta,
+            rule_reasons=rule_reasons,
         )
         decision = self._engine.evaluate(candidate)
 

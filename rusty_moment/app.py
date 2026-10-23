@@ -25,6 +25,10 @@ from .detection.keyword_detector import KeywordDetector
 from .detection.microphone_capture import MicrophoneCapture
 from .detection.rule_analyzer import RuleAnalyzer
 from .detection.speech_recognizer import NullRecognizer, SpeechRecognizer, build_recognizer
+from .phrases import library_from_legacy_keywords, load_or_default, merge_libraries, summarize
+from .phrases.combination import RuleEngine
+from .phrases.context import ContextTracker
+from .phrases.matcher import PhraseMatcher
 from .detection.trigger_engine import CandidateEvent, DedupeTracker, TriggerDecision, TriggerEngine
 from .obs.obs_client import ConnectionState, OBSClient
 from .obs.obs_controller import OBSController
@@ -324,6 +328,29 @@ def build_context(
             trigger_source_label(decision), decision.reason, score=decision.combined
         )
 
+    # ---- 结构化词库（阶段 3）：词库匹配 + 组合规则 + 上下文 ----
+    library, library_errors, _library_warnings = load_or_default(
+        config.phrases.library_path or None
+    )
+    if library_errors:
+        log.warning("词库加载有问题，已回退内置词库：%s", "；".join(library_errors[:3]))
+    # 旧版 keywords 里的自建词条并入（只补缺失表达，不覆盖内置的类别与权重）
+    legacy_library = library_from_legacy_keywords(
+        config.keywords.positives, config.keywords.exclusions
+    )
+    if legacy_library.entries:
+        library = merge_libraries(library, legacy_library, overwrite=False)
+        log.info("已把 %d 条旧关键词并入结构化词库（不覆盖内置表达）", len(legacy_library.entries))
+    phrase_matcher = PhraseMatcher(
+        library,
+        case_sensitive=config.keywords.case_sensitive,
+        min_hits=config.keywords.min_hits,
+        fuzzy=config.phrases.fuzzy_enabled,
+    )
+    phrase_rules = RuleEngine(library)
+    context_tracker = ContextTracker(window_seconds=config.phrases.context_window_seconds)
+    log.info("词库就绪：%s", summarize(library))
+
     detection = DetectionPipeline(
         config_provider=config_provider,
         capture=capture,
@@ -335,6 +362,9 @@ def build_context(
         state_machine=machine,
         on_status=(bridge.detection_status.emit if bridge is not None else None),
         on_trigger=on_detection_trigger,
+        phrase_matcher=phrase_matcher,
+        rule_engine=phrase_rules,
+        context_tracker=context_tracker,
     )
 
     ctx = ApplicationContext(

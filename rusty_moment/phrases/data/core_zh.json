@@ -1,0 +1,7802 @@
+{
+  "schema_version": 1,
+  "library_name": "Rusty Moment Core Library",
+  "language": [
+    "zh-CN"
+  ],
+  "entries": [
+    {
+      "id": "sac_001",
+      "canonical_phrase": "你们先走，我断后",
+      "variants": [
+        "你们先撤，我来断后",
+        "你们走，我留下",
+        "我先顶着，你们撤"
+      ],
+      "category": "sacrifice",
+      "weight": 0.98,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_002",
+      "canonical_phrase": "别管我，快走",
+      "variants": [
+        "别管我了你们跑",
+        "不用管我，快撤",
+        "别救我，你们走"
+      ],
+      "category": "sacrifice",
+      "weight": 0.98,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_003",
+      "canonical_phrase": "我来拖住他们",
+      "variants": [
+        "我拖住他们，你们撤",
+        "我把他们缠住",
+        "我先进去拖住"
+      ],
+      "category": "sacrifice",
+      "weight": 0.96,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_004",
+      "canonical_phrase": "替我报仇",
+      "variants": [
+        "帮我报仇",
+        "记得替我报仇",
+        "给我报仇啊兄弟们"
+      ],
+      "category": "sacrifice",
+      "weight": 0.95,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_005",
+      "canonical_phrase": "这次换我保护你",
+      "variants": [
+        "这回我保护你",
+        "换我护着你了",
+        "这次我来护你"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_006",
+      "canonical_phrase": "告诉他们我没有逃跑",
+      "variants": [
+        "告诉他们我没跑",
+        "跟他们说我不是逃兵",
+        "告诉他们我顶住了"
+      ],
+      "category": "sacrifice",
+      "weight": 0.92,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_007",
+      "canonical_phrase": "至少这一次，让我来",
+      "variants": [
+        "这次让我来",
+        "就这一次我上",
+        "至少这次我来"
+      ],
+      "category": "sacrifice",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_008",
+      "canonical_phrase": "如果我回不去了",
+      "variants": [
+        "我要是回不去",
+        "万一我回不来",
+        "我可能回不去了"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_009",
+      "canonical_phrase": "你们撤，我掩护",
+      "variants": [
+        "你们撤我掩护",
+        "我掩护你们撤",
+        "撤退，我断后"
+      ],
+      "category": "sacrifice",
+      "weight": 0.96,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_010",
+      "canonical_phrase": "我给你们争取时间",
+      "variants": [
+        "我给你们拖时间",
+        "我帮你们拖一下",
+        "我争取几秒"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat",
+        "objective"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_011",
+      "canonical_phrase": "这里交给我",
+      "variants": [
+        "这里我来",
+        "这块交给我",
+        "这波我上"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_012",
+      "canonical_phrase": "你先走，我随后就到",
+      "variants": [
+        "你先走我马上来",
+        "你走，我跟上"
+      ],
+      "category": "sacrifice",
+      "weight": 0.72,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_013",
+      "canonical_phrase": "我垫后",
+      "variants": [
+        "我来垫后",
+        "我最后走",
+        "我压后"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_014",
+      "canonical_phrase": "别回头，往前跑",
+      "variants": [
+        "别回头，快跑",
+        "一直往前，别回头",
+        "别看我，跑"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_015",
+      "canonical_phrase": "我把他们引开",
+      "variants": [
+        "我去引开他们",
+        "我把人拉走",
+        "我吸引火力"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_016",
+      "canonical_phrase": "我用命换你",
+      "variants": [
+        "我用命换你这条命",
+        "我拿命换",
+        "用我换你"
+      ],
+      "category": "sacrifice",
+      "weight": 0.92,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_017",
+      "canonical_phrase": "让我来挡这一下",
+      "variants": [
+        "我来挡",
+        "让我挡",
+        "我挡这一下"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_018",
+      "canonical_phrase": "我顶住，你们输出",
+      "variants": [
+        "我顶你们打",
+        "我扛住，你们输出",
+        "我顶前面你们打"
+      ],
+      "category": "sacrifice",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_019",
+      "canonical_phrase": "剩下交给我",
+      "variants": [
+        "剩下的我来",
+        "其余我来处理"
+      ],
+      "category": "sacrifice",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_020",
+      "canonical_phrase": "我这波必死",
+      "variants": [
+        "这波我必死",
+        "我这次活不了",
+        "我这个位置要死"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_021",
+      "canonical_phrase": "我这条命不值钱",
+      "variants": [
+        "我的命不值钱",
+        "我死了没关系",
+        "我这条命便宜"
+      ],
+      "category": "sacrifice",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_022",
+      "canonical_phrase": "用我换他，值了",
+      "variants": [
+        "换他我值了",
+        "用我换他划算",
+        "拿我换他"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_023",
+      "canonical_phrase": "我冲了，你们跟上",
+      "variants": [
+        "我上了你们跟",
+        "我先冲"
+      ],
+      "category": "sacrifice",
+      "weight": 0.7,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_024",
+      "canonical_phrase": "我卖一波，你们收",
+      "variants": [
+        "我卖你们收",
+        "我去卖一波",
+        "我骗一波技能"
+      ],
+      "category": "sacrifice",
+      "weight": 0.78,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_025",
+      "canonical_phrase": "我挡枪",
+      "variants": [
+        "我来挡枪",
+        "我给他挡枪",
+        "我挡子弹"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_026",
+      "canonical_phrase": "我架枪，你们走",
+      "variants": [
+        "我架着你们走",
+        "我架枪掩护",
+        "我架住，你们撤"
+      ],
+      "category": "sacrifice",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_027",
+      "canonical_phrase": "我在门口守着",
+      "variants": [
+        "我守在门口",
+        "我守门口",
+        "门口我看着"
+      ],
+      "category": "sacrifice",
+      "weight": 0.72,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "objective",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_028",
+      "canonical_phrase": "我守到最后一个人",
+      "variants": [
+        "我守到最后一个",
+        "我一直守到最后",
+        "最后一人我来守"
+      ],
+      "category": "sacrifice",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_029",
+      "canonical_phrase": "我不走了，你们走",
+      "variants": [
+        "我不走了",
+        "你们走吧，我留下",
+        "我不撤了"
+      ],
+      "category": "sacrifice",
+      "weight": 0.92,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_030",
+      "canonical_phrase": "我留下看家",
+      "variants": [
+        "我看家",
+        "我留下来看家",
+        "我留守"
+      ],
+      "category": "sacrifice",
+      "weight": 0.65,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "objective"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_031",
+      "canonical_phrase": "我拿命去换",
+      "variants": [
+        "拿命换",
+        "我拿命拼",
+        "我豁出去了"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_032",
+      "canonical_phrase": "我给你们开条路",
+      "variants": [
+        "我给你们开路",
+        "我开条道",
+        "我把路打开"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_033",
+      "canonical_phrase": "我挡在前面",
+      "variants": [
+        "我在前面挡",
+        "我站前面挡",
+        "我挡最前面"
+      ],
+      "category": "sacrifice",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_034",
+      "canonical_phrase": "我倒下了你们别管",
+      "variants": [
+        "我倒地了别管我",
+        "我倒了你们走",
+        "我躺了别来救"
+      ],
+      "category": "sacrifice",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_035",
+      "canonical_phrase": "我用身体挡子弹",
+      "variants": [
+        "我拿身体挡",
+        "我顶子弹"
+      ],
+      "category": "sacrifice",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.65,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_036",
+      "canonical_phrase": "我来做诱饵",
+      "variants": [
+        "我当诱饵",
+        "我做饵",
+        "我去钓他们"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_037",
+      "canonical_phrase": "我拖延一下",
+      "variants": [
+        "我拖延几秒",
+        "我拖一会儿",
+        "我延缓一下"
+      ],
+      "category": "sacrifice",
+      "weight": 0.78,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_038",
+      "canonical_phrase": "后面交给我",
+      "variants": [
+        "后面我来",
+        "后方我守",
+        "后面我盯着"
+      ],
+      "category": "sacrifice",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_039",
+      "canonical_phrase": "我一个人顶就行",
+      "variants": [
+        "我一个人顶得住",
+        "我一个就够",
+        "我自己扛"
+      ],
+      "category": "sacrifice",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "sac_040",
+      "canonical_phrase": "我换掉他",
+      "variants": [
+        "我一换一",
+        "我把人换掉",
+        "我换他一条命"
+      ],
+      "category": "sacrifice",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_001",
+      "canonical_phrase": "帮我照顾好我妈",
+      "variants": [
+        "照顾好我妈",
+        "帮我照顾我妈咪",
+        "照顾好我爸妈"
+      ],
+      "category": "farewell",
+      "weight": 0.98,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_002",
+      "canonical_phrase": "把我的东西带回去",
+      "variants": [
+        "把我的装备带回去",
+        "把我东西捎回去",
+        "我的东西你们带走"
+      ],
+      "category": "farewell",
+      "weight": 0.92,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_003",
+      "canonical_phrase": "记住我的名字",
+      "variants": [
+        "记住我叫什么",
+        "别忘了我的名字",
+        "记得我这个人"
+      ],
+      "category": "farewell",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.65,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_004",
+      "canonical_phrase": "下次再一起玩",
+      "variants": [
+        "有机会再一起玩",
+        "下把还一起",
+        "下次再聚"
+      ],
+      "category": "farewell",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_005",
+      "canonical_phrase": "如果还有下次",
+      "variants": [
+        "要是还有下一次",
+        "如果还有机会",
+        "有下次的话"
+      ],
+      "category": "farewell",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_006",
+      "canonical_phrase": "你答应过要带我回去的",
+      "variants": [
+        "你答应过带我回去",
+        "你说过要带我走的",
+        "你答应我的，带我回去"
+      ],
+      "category": "farewell",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_007",
+      "canonical_phrase": "别忘了我",
+      "variants": [
+        "不要忘了我",
+        "记得我啊",
+        "别忘了兄弟我"
+      ],
+      "category": "farewell",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_008",
+      "canonical_phrase": "我走了，你们保重",
+      "variants": [
+        "我走了，保重",
+        "那我先撤了，保重",
+        "我走啦，你们保重"
+      ],
+      "category": "farewell",
+      "weight": 0.78,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_009",
+      "canonical_phrase": "这是最后一次了",
+      "variants": [
+        "最后一次了",
+        "这就是最后一次",
+        "没下次了"
+      ],
+      "category": "farewell",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.65,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_010",
+      "canonical_phrase": "以后就靠你们了",
+      "variants": [
+        "往后就靠你们",
+        "以后靠你们了",
+        "之后交给你们了"
+      ],
+      "category": "farewell",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_011",
+      "canonical_phrase": "剩下的路你们自己走",
+      "variants": [
+        "后面的路你们走",
+        "剩下的你们继续",
+        "往后的路我没法陪了"
+      ],
+      "category": "farewell",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_012",
+      "canonical_phrase": "替我跟他们说声对不起",
+      "variants": [
+        "跟他们说声对不起",
+        "帮我道个歉",
+        "替我说句抱歉"
+      ],
+      "category": "farewell",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_013",
+      "canonical_phrase": "别为我难过",
+      "variants": [
+        "不用为我难过",
+        "别难过",
+        "别哭啊"
+      ],
+      "category": "farewell",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_014",
+      "canonical_phrase": "我不后悔",
+      "variants": [
+        "我不后悔这一波",
+        "值了，不后悔"
+      ],
+      "category": "farewell",
+      "weight": 0.78,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_015",
+      "canonical_phrase": "我尽力了",
+      "variants": [
+        "已经尽力了",
+        "我尽力啦",
+        "我真的尽力了"
+      ],
+      "category": "farewell",
+      "weight": 0.95,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_016",
+      "canonical_phrase": "这一路谢谢你们",
+      "variants": [
+        "谢谢你们一路陪我",
+        "这一路多谢了",
+        "谢谢大家"
+      ],
+      "category": "farewell",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_017",
+      "canonical_phrase": "谢谢你们陪我这么久",
+      "variants": [
+        "谢谢你们一直陪我",
+        "感谢你们陪着我",
+        "这些年谢谢了"
+      ],
+      "category": "farewell",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_018",
+      "canonical_phrase": "记得给我留个位置",
+      "variants": [
+        "给我留个位置",
+        "留个位子给我",
+        "给我留个坑位"
+      ],
+      "category": "farewell",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_019",
+      "canonical_phrase": "我先去前面探路",
+      "variants": [
+        "我去前面探探路",
+        "我先过去看看",
+        "我去趟前面"
+      ],
+      "category": "farewell",
+      "weight": 0.72,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_020",
+      "canonical_phrase": "我在那边等你们",
+      "variants": [
+        "我在那边等你",
+        "到了那边我等你",
+        "那边我等你们"
+      ],
+      "category": "farewell",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_021",
+      "canonical_phrase": "把装备拿走，别浪费",
+      "variants": [
+        "我装备你们拿走",
+        "捡我装备，别浪费",
+        "拿我的枪"
+      ],
+      "category": "farewell",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_022",
+      "canonical_phrase": "我的枪你们拿去用",
+      "variants": [
+        "枪给你们用",
+        "我这把枪你们捡",
+        "拿我的枪继续打"
+      ],
+      "category": "farewell",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_023",
+      "canonical_phrase": "别救我了，救不了的",
+      "variants": [
+        "不用救我，救不了",
+        "别救了，来不及了",
+        "救不了了，别浪费"
+      ],
+      "category": "farewell",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_024",
+      "canonical_phrase": "我这次真的走了",
+      "variants": [
+        "这次真的要走了",
+        "这回是真走了",
+        "我真走了"
+      ],
+      "category": "farewell",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_025",
+      "canonical_phrase": "照顾好自己",
+      "variants": [
+        "你们照顾好自己",
+        "自己多保重",
+        "好好照顾自己"
+      ],
+      "category": "farewell",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_026",
+      "canonical_phrase": "我没什么遗憾",
+      "variants": [
+        "我没什么可遗憾的",
+        "没有遗憾了",
+        "我不留遗憾"
+      ],
+      "category": "farewell",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_027",
+      "canonical_phrase": "该说的我都说了",
+      "variants": [
+        "该说的话说完了",
+        "我要说的都说完了",
+        "话我说完了"
+      ],
+      "category": "farewell",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_028",
+      "canonical_phrase": "剩下的交给你们",
+      "variants": [
+        "余下的交给你们",
+        "后面靠你们了",
+        "剩下看你们了"
+      ],
+      "category": "farewell",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_029",
+      "canonical_phrase": "我欠你们的，下辈子还",
+      "variants": [
+        "下辈子再还你们",
+        "欠你们的我下辈子还",
+        "这份情我记着"
+      ],
+      "category": "farewell",
+      "weight": 0.92,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_030",
+      "canonical_phrase": "我这边先断了",
+      "variants": [
+        "我这边要断了",
+        "信号没了，我先断",
+        "我掉线了，别等我"
+      ],
+      "category": "farewell",
+      "weight": 0.75,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_031",
+      "canonical_phrase": "网要断了，我先说最后一句",
+      "variants": [
+        "网卡了，最后说一句",
+        "要断网了，最后一句",
+        "我快掉线了，说最后一句"
+      ],
+      "category": "farewell",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_032",
+      "canonical_phrase": "记住今天",
+      "variants": [
+        "记住今天这一把",
+        "今天你们都记住",
+        "把今天记住了"
+      ],
+      "category": "farewell",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_033",
+      "canonical_phrase": "你们要好好的",
+      "variants": [
+        "你们要好好的啊",
+        "你们都得好好活着",
+        "都要好好的"
+      ],
+      "category": "farewell",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_034",
+      "canonical_phrase": "我这就去见他了",
+      "variants": [
+        "我去见他了",
+        "该去见他了",
+        "我去找他了"
+      ],
+      "category": "farewell",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "far_035",
+      "canonical_phrase": "我这条命，早就该还了",
+      "variants": [
+        "这条命该还了",
+        "这条命我早该还",
+        "命该还回去了"
+      ],
+      "category": "farewell",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_001",
+      "canonical_phrase": "这把没了",
+      "variants": [
+        "这局没了",
+        "这一把没了",
+        "这波没了啊"
+      ],
+      "category": "defeat",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_002",
+      "canonical_phrase": "我倒了，别救",
+      "variants": [
+        "我倒了，不用救",
+        "我倒地了别救",
+        "我趴了，别来"
+      ],
+      "category": "defeat",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_003",
+      "canonical_phrase": "没子弹了",
+      "variants": [
+        "子弹打完了",
+        "没子弹了啊",
+        "弹夹空了"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "low_hp"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_004",
+      "canonical_phrase": "我撑不住了",
+      "variants": [
+        "我真的撑不住",
+        "撑不住了",
+        "我快撑不住了"
+      ],
+      "category": "defeat",
+      "weight": 0.95,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.5,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_005",
+      "canonical_phrase": "原来是这样吗",
+      "variants": [
+        "原来是这样",
+        "原来是这个意思",
+        "原来是这么回事"
+      ],
+      "category": "defeat",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_006",
+      "canonical_phrase": "所以这就是结局",
+      "variants": [
+        "这就是结局吧",
+        "原来这就是结局",
+        "结局就是这样"
+      ],
+      "category": "defeat",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_007",
+      "canonical_phrase": "我就知道会这样",
+      "variants": [
+        "我就知道会输",
+        "早就知道会这样",
+        "果然是这样"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.65,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_008",
+      "canonical_phrase": "我顶不住了",
+      "variants": [
+        "顶不住了",
+        "我真的顶不住",
+        "我顶不住了兄弟"
+      ],
+      "category": "defeat",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_009",
+      "canonical_phrase": "我不行了",
+      "variants": [
+        "我真的不行了",
+        "不行了",
+        "我不行了啊"
+      ],
+      "category": "defeat",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_010",
+      "canonical_phrase": "这波输定了",
+      "variants": [
+        "这波必输",
+        "这把输定了",
+        "输定了这波"
+      ],
+      "category": "defeat",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_011",
+      "canonical_phrase": "打不过了",
+      "variants": [
+        "真打不过",
+        "打不过他们",
+        "正面打不过"
+      ],
+      "category": "defeat",
+      "weight": 0.78,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_012",
+      "canonical_phrase": "守不住了",
+      "variants": [
+        "这守不住了",
+        "守不住了兄弟",
+        "点守不住了"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "objective"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_013",
+      "canonical_phrase": "没救了",
+      "variants": [
+        "救不了了",
+        "已经没救了",
+        "没得救了"
+      ],
+      "category": "defeat",
+      "weight": 0.75,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_014",
+      "canonical_phrase": "已经结束了",
+      "variants": [
+        "结束了",
+        "就已经结束了",
+        "都结束了"
+      ],
+      "category": "defeat",
+      "weight": 0.78,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_015",
+      "canonical_phrase": "全灭了",
+      "variants": [
+        "全灭",
+        "我们全灭了",
+        "团灭了"
+      ],
+      "category": "defeat",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_016",
+      "canonical_phrase": "一波带走",
+      "variants": [
+        "被一波带走",
+        "一波被带走",
+        "直接一波"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_017",
+      "canonical_phrase": "我们输了",
+      "variants": [
+        "这把输了",
+        "输了这把",
+        "我们输了啊"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_018",
+      "canonical_phrase": "打不动了",
+      "variants": [
+        "真的打不动",
+        "打不动了啊",
+        "没劲打了"
+      ],
+      "category": "defeat",
+      "weight": 0.75,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_019",
+      "canonical_phrase": "我认输",
+      "variants": [
+        "认输了",
+        "我投降"
+      ],
+      "category": "defeat",
+      "weight": 0.75,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_020",
+      "canonical_phrase": "我放弃了",
+      "variants": [
+        "我放弃了这把",
+        "放弃治疗了",
+        "我放弃"
+      ],
+      "category": "defeat",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_021",
+      "canonical_phrase": "不打了，投了",
+      "variants": [
+        "不打了，投吧",
+        "打不下去，投",
+        "直接投了"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_022",
+      "canonical_phrase": "我崩了",
+      "variants": [
+        "我真的崩了",
+        "心态崩了",
+        "我整个崩了"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_023",
+      "canonical_phrase": "我麻了",
+      "variants": [
+        "我人麻了",
+        "已经麻了",
+        "我麻了真的"
+      ],
+      "category": "defeat",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_024",
+      "canonical_phrase": "没办法了",
+      "variants": [
+        "真没办法了",
+        "一点办法都没有",
+        "没办法了啊"
+      ],
+      "category": "defeat",
+      "weight": 0.72,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_025",
+      "canonical_phrase": "就这样吧",
+      "variants": [
+        "那就这样吧",
+        "就这样了啊",
+        "就这样了"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_026",
+      "canonical_phrase": "输麻了",
+      "variants": [
+        "已经输麻了",
+        "输到麻了",
+        "我输麻了"
+      ],
+      "category": "defeat",
+      "weight": 0.65,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_027",
+      "canonical_phrase": "我身体被压住了",
+      "variants": [
+        "我被压住了",
+        "身体卡住了",
+        "我起不来了"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_028",
+      "canonical_phrase": "已经没机会了",
+      "variants": [
+        "没机会了",
+        "机会都没了",
+        "我们没机会了"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_029",
+      "canonical_phrase": "我这波失误了",
+      "variants": [
+        "我失误了",
+        "这波是我失误",
+        "我的锅"
+      ],
+      "category": "defeat",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_030",
+      "canonical_phrase": "全崩了",
+      "variants": [
+        "我们全崩了",
+        "整个崩盘",
+        "全线崩了"
+      ],
+      "category": "defeat",
+      "weight": 0.78,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_031",
+      "canonical_phrase": "我们守不下来了",
+      "variants": [
+        "守不下来了",
+        "这波守不下来",
+        "点我们守不住了"
+      ],
+      "category": "defeat",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "objective"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_032",
+      "canonical_phrase": "我血不多了",
+      "variants": [
+        "血不多了",
+        "我血量很低",
+        "我就一点血"
+      ],
+      "category": "defeat",
+      "weight": 0.65,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "low_hp",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_033",
+      "canonical_phrase": "我是最后一个了",
+      "variants": [
+        "就剩我一个了",
+        "只剩我一个",
+        "最后一个是我"
+      ],
+      "category": "defeat",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.65,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_034",
+      "canonical_phrase": "队友都死了",
+      "variants": [
+        "队友全死了",
+        "他们都没了",
+        "就剩我了"
+      ],
+      "category": "defeat",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_035",
+      "canonical_phrase": "完了完了",
+      "variants": [
+        "完了呀",
+        "这下完了",
+        "完了完了完了"
+      ],
+      "category": "defeat",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_036",
+      "canonical_phrase": "该结束了",
+      "variants": [
+        "是时候结束了",
+        "该收场了",
+        "该结束了兄弟"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_037",
+      "canonical_phrase": "我掉下去了",
+      "variants": [
+        "我掉坑里了",
+        "我掉下去了啊",
+        "我摔下去了"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_038",
+      "canonical_phrase": "跑不掉了",
+      "variants": [
+        "跑不掉了兄弟",
+        "走不掉了",
+        "我们跑不掉"
+      ],
+      "category": "defeat",
+      "weight": 0.78,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.68,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_039",
+      "canonical_phrase": "我被包围了",
+      "variants": [
+        "我被人围了",
+        "他们把我围住",
+        "我被包了"
+      ],
+      "category": "defeat",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_040",
+      "canonical_phrase": "出不去了",
+      "variants": [
+        "门口被封了",
+        "根本出不去",
+        "出不去啊"
+      ],
+      "category": "defeat",
+      "weight": 0.78,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_041",
+      "canonical_phrase": "一滴血都没有了",
+      "variants": [
+        "血见底了",
+        "血条空了",
+        "我一点血都没了"
+      ],
+      "category": "defeat",
+      "weight": 0.7,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "low_hp",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_042",
+      "canonical_phrase": "该认命了",
+      "variants": [
+        "认命吧",
+        "该认命了兄弟",
+        "只能认命"
+      ],
+      "category": "defeat",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_043",
+      "canonical_phrase": "我这边要塌了",
+      "variants": [
+        "这边塌了",
+        "我这块要崩",
+        "我这边守不住"
+      ],
+      "category": "defeat",
+      "weight": 0.75,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "objective"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_044",
+      "canonical_phrase": "我们被打散了",
+      "variants": [
+        "队伍被打散",
+        "我们都散了",
+        "阵型散了"
+      ],
+      "category": "defeat",
+      "weight": 0.72,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_045",
+      "canonical_phrase": "这一把打得太难了",
+      "variants": [
+        "这把太难打了",
+        "实在打不动这把",
+        "太难了这把"
+      ],
+      "category": "defeat",
+      "weight": 0.66,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "def_046",
+      "canonical_phrase": "算了不打了",
+      "variants": [
+        "我不想打了",
+        "不打了不打了",
+        "算了，打不了了"
+      ],
+      "category": "defeat",
+      "weight": 0.75,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_001",
+      "canonical_phrase": "兄弟，你走吧",
+      "variants": [
+        "兄弟你走",
+        "你走吧兄弟",
+        "老哥你先走"
+      ],
+      "category": "teammate",
+      "weight": 0.95,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_002",
+      "canonical_phrase": "不用管我，赢下这把",
+      "variants": [
+        "别管我，赢下来",
+        "不用管我，赢",
+        "你们赢了就行"
+      ],
+      "category": "teammate",
+      "weight": 0.95,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "objective"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_003",
+      "canonical_phrase": "装备给你了",
+      "variants": [
+        "我装备都给你",
+        "东西给你了",
+        "我这点家当都给你"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_004",
+      "canonical_phrase": "你们一定要赢",
+      "variants": [
+        "一定得赢啊",
+        "你们必须赢",
+        "赢下这一把"
+      ],
+      "category": "teammate",
+      "weight": 0.92,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "objective"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_005",
+      "canonical_phrase": "兄弟，下次再一起玩",
+      "variants": [
+        "兄弟下把还一起",
+        "下次还找你玩",
+        "有缘再一起打"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_006",
+      "canonical_phrase": "你先活下去",
+      "variants": [
+        "你要活下来",
+        "你得活着",
+        "你活着就行"
+      ],
+      "category": "teammate",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.58,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_007",
+      "canonical_phrase": "别浪费我的牺牲",
+      "variants": [
+        "别让我白死",
+        "我这条命别白费",
+        "别浪费我这次"
+      ],
+      "category": "teammate",
+      "weight": 0.92,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.65,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_008",
+      "canonical_phrase": "你们别回头",
+      "variants": [
+        "都别回头",
+        "别回头看",
+        "不要回头看我"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_009",
+      "canonical_phrase": "快走，别问",
+      "variants": [
+        "先走，别问了",
+        "快走别问那么多",
+        "走，别管"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_010",
+      "canonical_phrase": "记住我说的话",
+      "variants": [
+        "记住我说过的",
+        "我刚说的你记住",
+        "记住我的话"
+      ],
+      "category": "teammate",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.68,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_011",
+      "canonical_phrase": "你们打，我看着",
+      "variants": [
+        "你们打就行",
+        "我看着你们打",
+        "剩下的你们打"
+      ],
+      "category": "teammate",
+      "weight": 0.7,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_012",
+      "canonical_phrase": "我帮你顶一下",
+      "variants": [
+        "我帮你扛一下",
+        "我帮你挡一下",
+        "我替你顶"
+      ],
+      "category": "teammate",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_013",
+      "canonical_phrase": "交给你了兄弟",
+      "variants": [
+        "交给你了老哥",
+        "这里交给你",
+        "后面交给你了"
+      ],
+      "category": "teammate",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_014",
+      "canonical_phrase": "你先救他",
+      "variants": [
+        "先救他别救我",
+        "去救他，我没事",
+        "救他先"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_015",
+      "canonical_phrase": "别救我，救他",
+      "variants": [
+        "不用救我，救他",
+        "救我干嘛，救他",
+        "别管我，先救他"
+      ],
+      "category": "teammate",
+      "weight": 0.92,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_016",
+      "canonical_phrase": "他能救，我不行",
+      "variants": [
+        "他还有救，我没有",
+        "救他吧，我救不了",
+        "别在我这浪费"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_017",
+      "canonical_phrase": "你还有机会，我没有",
+      "variants": [
+        "你还能打，我不行了",
+        "你还有机会",
+        "机会留给你的"
+      ],
+      "category": "teammate",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_018",
+      "canonical_phrase": "你们撤，我留下",
+      "variants": [
+        "你们撤我在这",
+        "我留下，你们撤"
+      ],
+      "category": "teammate",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.58,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_019",
+      "canonical_phrase": "帮我挡一下",
+      "variants": [
+        "帮我挡一下兄弟",
+        "给我挡一下",
+        "帮我拦一下"
+      ],
+      "category": "teammate",
+      "weight": 0.72,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_020",
+      "canonical_phrase": "我掩护你，快走",
+      "variants": [
+        "我掩护你快跑",
+        "我掩护，你走",
+        "你走我掩护"
+      ],
+      "category": "teammate",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.58,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_021",
+      "canonical_phrase": "你先跑，我断",
+      "variants": [
+        "你先跑我断后",
+        "你跑我断",
+        "你先撤，我断"
+      ],
+      "category": "teammate",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.58,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_022",
+      "canonical_phrase": "兄弟，替我活下去",
+      "variants": [
+        "你替我活下去",
+        "替我好好活着",
+        "你得替我们活下去"
+      ],
+      "category": "teammate",
+      "weight": 0.95,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_023",
+      "canonical_phrase": "你们好好打",
+      "variants": [
+        "你们好好打啊",
+        "好好打，别管我",
+        "认真打"
+      ],
+      "category": "teammate",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_024",
+      "canonical_phrase": "帮我带句话给她",
+      "variants": [
+        "帮我带句话",
+        "替我带句话给她",
+        "有句话你帮我带"
+      ],
+      "category": "teammate",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_025",
+      "canonical_phrase": "我这边没事，你们打",
+      "variants": [
+        "我这边还行，你们打",
+        "我没事，你们继续",
+        "我撑得住，你们打"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_026",
+      "canonical_phrase": "我这边别管",
+      "variants": [
+        "我这边你们别管",
+        "别管我这边",
+        "这边不用管我"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_027",
+      "canonical_phrase": "我顶一会儿，你们先撤",
+      "variants": [
+        "我顶一会儿你们撤",
+        "我撑一会儿，你们走",
+        "我扛一会，你们撤"
+      ],
+      "category": "teammate",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.58,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_028",
+      "canonical_phrase": "我拖住，你们去下包",
+      "variants": [
+        "我拖着，你们下包",
+        "我拖他们，你们装包",
+        "我拖着，你们去拆"
+      ],
+      "category": "teammate",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "objective"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_029",
+      "canonical_phrase": "你们守，我出去换",
+      "variants": [
+        "我出去换一个",
+        "我出去换命",
+        "你们守着，我出去"
+      ],
+      "category": "teammate",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_030",
+      "canonical_phrase": "你拿我的钱",
+      "variants": [
+        "我的钱你拿走",
+        "钱都给你",
+        "我钱留给你"
+      ],
+      "category": "teammate",
+      "weight": 0.75,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.65,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_031",
+      "canonical_phrase": "我不需要救",
+      "variants": [
+        "我不用救",
+        "别给我奶",
+        "我不需要治疗"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_032",
+      "canonical_phrase": "让我死在这儿",
+      "variants": [
+        "我就死这儿了",
+        "让我死这吧",
+        "我死这挺好"
+      ],
+      "category": "teammate",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_033",
+      "canonical_phrase": "这里我守着，你们走",
+      "variants": [
+        "这我守着",
+        "这我盯，你们走",
+        "这地方我守"
+      ],
+      "category": "teammate",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "objective"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.58,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_034",
+      "canonical_phrase": "我最后再帮你一次",
+      "variants": [
+        "最后帮你一次",
+        "我再帮你这一回",
+        "就帮你这最后一次"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_035",
+      "canonical_phrase": "你先撤，我收尾",
+      "variants": [
+        "我收尾，你撤",
+        "你撤我收拾",
+        "剩下我收尾"
+      ],
+      "category": "teammate",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_036",
+      "canonical_phrase": "别哭，我没事",
+      "variants": [
+        "别哭啊我没事",
+        "别哭，我好着呢",
+        "哭什么，我没事"
+      ],
+      "category": "teammate",
+      "weight": 0.88,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_037",
+      "canonical_phrase": "我这就过去了",
+      "variants": [
+        "我马上就过去",
+        "我这就过去找你",
+        "我过去了啊"
+      ],
+      "category": "teammate",
+      "weight": 0.7,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_038",
+      "canonical_phrase": "后面靠你了",
+      "variants": [
+        "后面靠你了兄弟",
+        "之后靠你",
+        "接下来看你的"
+      ],
+      "category": "teammate",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_039",
+      "canonical_phrase": "我信你，你去吧",
+      "variants": [
+        "信你，去吧",
+        "你去吧，我信你",
+        "交给你我放心"
+      ],
+      "category": "teammate",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.68,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tea_040",
+      "canonical_phrase": "你带着我的份一起打",
+      "variants": [
+        "带着我那份打",
+        "帮我打下去",
+        "我的份你替我打"
+      ],
+      "category": "teammate",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_001",
+      "canonical_phrase": "我外卖到了",
+      "variants": [
+        "外卖到了",
+        "我外卖到了啊",
+        "外卖来了"
+      ],
+      "category": "daily",
+      "weight": 0.35,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.9,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_002",
+      "canonical_phrase": "我去拿个快递",
+      "variants": [
+        "我下楼拿快递",
+        "快递到了我去拿",
+        "我去取个快递"
+      ],
+      "category": "daily",
+      "weight": 0.32,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.88,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_003",
+      "canonical_phrase": "我喝口水",
+      "variants": [
+        "等我喝口水",
+        "我喝口水先",
+        "喝口水"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_004",
+      "canonical_phrase": "等我一下，我接个电话",
+      "variants": [
+        "我接个电话",
+        "等会，电话",
+        "我接一下电话"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.82,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_005",
+      "canonical_phrase": "我鼠标没电了",
+      "variants": [
+        "鼠标没电了",
+        "我鼠标没电啊",
+        "鼠标没反应了"
+      ],
+      "category": "daily",
+      "weight": 0.34,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.88,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_006",
+      "canonical_phrase": "我键盘卡了",
+      "variants": [
+        "键盘卡住了",
+        "我键盘按不动",
+        "键盘失灵了"
+      ],
+      "category": "daily",
+      "weight": 0.32,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.82,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_007",
+      "canonical_phrase": "我电脑卡了",
+      "variants": [
+        "电脑卡死了",
+        "我电脑卡成狗",
+        "电脑又卡了"
+      ],
+      "category": "daily",
+      "weight": 0.34,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_008",
+      "canonical_phrase": "我忘记换弹了",
+      "variants": [
+        "忘了换弹",
+        "我忘记上膛了",
+        "忘记换弹夹"
+      ],
+      "category": "daily",
+      "weight": 0.33,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.86,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_009",
+      "canonical_phrase": "我不想上课了",
+      "variants": [
+        "不想上课",
+        "我不想去上课了",
+        "课我不上了"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_010",
+      "canonical_phrase": "我把文件删了",
+      "variants": [
+        "文件被我删了",
+        "我删错文件了",
+        "我把资料删了"
+      ],
+      "category": "daily",
+      "weight": 0.32,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_011",
+      "canonical_phrase": "这门怎么打不开",
+      "variants": [
+        "门怎么打不开",
+        "这门开不了",
+        "怎么推不开"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_012",
+      "canonical_phrase": "我只是想回家",
+      "variants": [
+        "我只想回家",
+        "我想回家了啊",
+        "让我回家吧"
+      ],
+      "category": "daily",
+      "weight": 0.38,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.92,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_013",
+      "canonical_phrase": "我今天没吃早饭",
+      "variants": [
+        "早饭没吃",
+        "我早上没吃饭",
+        "早饭都没吃"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_014",
+      "canonical_phrase": "我泡面好了",
+      "variants": [
+        "泡面好了",
+        "我面泡好了",
+        "泡面好了我去吃"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.86,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_015",
+      "canonical_phrase": "我手机响了",
+      "variants": [
+        "手机响了",
+        "我手机在响",
+        "谁给我打电话"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_016",
+      "canonical_phrase": "我妈喊我吃饭",
+      "variants": [
+        "我妈叫我吃饭",
+        "我妈叫我",
+        "家里喊吃饭了"
+      ],
+      "category": "daily",
+      "weight": 0.32,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.9,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_017",
+      "canonical_phrase": "我先去上个厕所",
+      "variants": [
+        "我去趟厕所",
+        "等我上个厕所",
+        "我先去趟洗手间"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.88,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_018",
+      "canonical_phrase": "我眼镜找不到了",
+      "variants": [
+        "眼镜哪去了",
+        "我眼镜呢",
+        "找不到眼镜了"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.84,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_019",
+      "canonical_phrase": "我袜子湿了",
+      "variants": [
+        "袜子湿了",
+        "我袜子全湿了",
+        "袜子进水了"
+      ],
+      "category": "daily",
+      "weight": 0.26,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.82,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_020",
+      "canonical_phrase": "我椅子坏了",
+      "variants": [
+        "椅子坏了",
+        "我椅子塌了",
+        "椅子腿断了"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_021",
+      "canonical_phrase": "我网怎么这么卡",
+      "variants": [
+        "网太卡了",
+        "我网卡成狗",
+        "这网怎么回事"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_022",
+      "canonical_phrase": "我好像着凉了",
+      "variants": [
+        "我可能着凉了",
+        "我感觉感冒了",
+        "我有点发烧"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.82,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_023",
+      "canonical_phrase": "我空调太冷了",
+      "variants": [
+        "空调太冷",
+        "我这边空调很冷",
+        "冷死了这空调"
+      ],
+      "category": "daily",
+      "weight": 0.26,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.78,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_024",
+      "canonical_phrase": "我充电线哪去了",
+      "variants": [
+        "充电线找不到",
+        "我充电线呢",
+        "充电线不见了"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.84,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_025",
+      "canonical_phrase": "我室友在打呼",
+      "variants": [
+        "室友打呼好大声",
+        "我室友睡着打呼",
+        "室友呼噜声太大"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.86,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_026",
+      "canonical_phrase": "楼下装修好吵",
+      "variants": [
+        "楼下在装修",
+        "装修吵死了",
+        "楼下一直敲"
+      ],
+      "category": "daily",
+      "weight": 0.26,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_027",
+      "canonical_phrase": "我作业还没写",
+      "variants": [
+        "作业还没动",
+        "我作业没写完",
+        "作业一笔没写"
+      ],
+      "category": "daily",
+      "weight": 0.32,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.88,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_028",
+      "canonical_phrase": "明天要考试",
+      "variants": [
+        "我明天考试",
+        "明天有考试",
+        "明天考试啊"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.86,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_029",
+      "canonical_phrase": "我快递丢了一件",
+      "variants": [
+        "快递少了一件",
+        "我快递丢了",
+        "快递没了"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_030",
+      "canonical_phrase": "我账号被盗了",
+      "variants": [
+        "账号被盗",
+        "我号被盗了",
+        "号被人登了"
+      ],
+      "category": "daily",
+      "weight": 0.32,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.82,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_031",
+      "canonical_phrase": "我忘记带钥匙",
+      "variants": [
+        "钥匙忘带了",
+        "我没带钥匙",
+        "钥匙落家里了"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.82,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_032",
+      "canonical_phrase": "我卡里没钱了",
+      "variants": [
+        "卡里没钱",
+        "我余额不足",
+        "没钱了啊"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_033",
+      "canonical_phrase": "我头发好油",
+      "variants": [
+        "头发太油了",
+        "我该洗头了",
+        "头发油了"
+      ],
+      "category": "daily",
+      "weight": 0.26,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.82,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_034",
+      "canonical_phrase": "我得去洗碗了",
+      "variants": [
+        "我去洗碗",
+        "碗还没洗",
+        "洗碗去了"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_035",
+      "canonical_phrase": "我冰箱空了",
+      "variants": [
+        "冰箱里啥都没有",
+        "冰箱空了",
+        "家里没吃的了"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.82,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_036",
+      "canonical_phrase": "我养的多肉死了",
+      "variants": [
+        "多肉死了",
+        "我多肉养死了",
+        "我的多肉烂根了"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.88,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_037",
+      "canonical_phrase": "我猫踩键盘了",
+      "variants": [
+        "猫踩键盘",
+        "我猫又踩上来了",
+        "猫在我键盘上"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.9,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_038",
+      "canonical_phrase": "我狗在叫我",
+      "variants": [
+        "狗在旁边叫",
+        "我狗一直叫",
+        "狗又要出去"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_039",
+      "canonical_phrase": "我该睡觉了",
+      "variants": [
+        "该睡了",
+        "我差不多要睡了",
+        "要睡觉了"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.82,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_040",
+      "canonical_phrase": "我闹钟没响",
+      "variants": [
+        "闹钟没响",
+        "我闹钟坏了",
+        "闹钟没叫醒我"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_041",
+      "canonical_phrase": "我鞋带开了",
+      "variants": [
+        "鞋带开了",
+        "我鞋带松了",
+        "鞋带又开了"
+      ],
+      "category": "daily",
+      "weight": 0.24,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.78,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_042",
+      "canonical_phrase": "我打嗝停不下来",
+      "variants": [
+        "打嗝停不下来",
+        "我一直打嗝",
+        "打嗝打个不停"
+      ],
+      "category": "daily",
+      "weight": 0.26,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_043",
+      "canonical_phrase": "我手指头被夹了",
+      "variants": [
+        "手指被夹了",
+        "我手被夹到了",
+        "手指夹了一下"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.82,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_044",
+      "canonical_phrase": "我刚打了个盹",
+      "variants": [
+        "我刚睡着了",
+        "刚刚打了个盹",
+        "我眯了一会儿"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_045",
+      "canonical_phrase": "我房间好乱",
+      "variants": [
+        "房间太乱了",
+        "我这屋乱成狗",
+        "房间得收拾了"
+      ],
+      "category": "daily",
+      "weight": 0.26,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.78,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_046",
+      "canonical_phrase": "我想喝奶茶了",
+      "variants": [
+        "想喝奶茶",
+        "我点杯奶茶",
+        "奶茶想喝了"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_047",
+      "canonical_phrase": "我裤子破了",
+      "variants": [
+        "裤子破了个洞",
+        "我裤子崩了",
+        "裤子裂了"
+      ],
+      "category": "daily",
+      "weight": 0.26,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.86,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_048",
+      "canonical_phrase": "我钥匙锁屋里了",
+      "variants": [
+        "钥匙锁里面了",
+        "我把自己锁外面了",
+        "钥匙锁房里了"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_049",
+      "canonical_phrase": "我钱包落车上了",
+      "variants": [
+        "钱包落车里",
+        "我钱包忘车上了",
+        "钱包在车上"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_050",
+      "canonical_phrase": "我咖啡撒键盘上了",
+      "variants": [
+        "咖啡洒键盘了",
+        "咖啡倒键盘上了",
+        "我把咖啡弄洒了"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.88,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_051",
+      "canonical_phrase": "我刚洗完澡",
+      "variants": [
+        "洗完澡了",
+        "我刚冲完凉",
+        "洗了个澡"
+      ],
+      "category": "daily",
+      "weight": 0.24,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_052",
+      "canonical_phrase": "我指甲长了",
+      "variants": [
+        "指甲太长了",
+        "该剪指甲了",
+        "我指甲没剪"
+      ],
+      "category": "daily",
+      "weight": 0.22,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_053",
+      "canonical_phrase": "我体重涨了三斤",
+      "variants": [
+        "我胖了三斤",
+        "体重涨了",
+        "我又胖了"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.82,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_054",
+      "canonical_phrase": "我要去剪头发",
+      "variants": [
+        "我去剪头",
+        "该剪头发了",
+        "我要理个发"
+      ],
+      "category": "daily",
+      "weight": 0.24,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.78,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_055",
+      "canonical_phrase": "我游戏更新了",
+      "variants": [
+        "游戏在更新",
+        "我游戏要更新",
+        "更新卡住了"
+      ],
+      "category": "daily",
+      "weight": 0.26,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_056",
+      "canonical_phrase": "我下载卡在九十九",
+      "variants": [
+        "卡在99%",
+        "下载卡住了",
+        "还剩百分之一"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_057",
+      "canonical_phrase": "我耳机一边没声",
+      "variants": [
+        "耳机一边坏了",
+        "我耳机不响一边",
+        "耳机只有一边声音"
+      ],
+      "category": "daily",
+      "weight": 0.3,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.84,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_058",
+      "canonical_phrase": "我充电宝没电了",
+      "variants": [
+        "充电宝空了",
+        "充电宝没电",
+        "充电宝也没电了"
+      ],
+      "category": "daily",
+      "weight": 0.28,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.82,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_059",
+      "canonical_phrase": "我被子太厚了",
+      "variants": [
+        "被子太厚",
+        "我这被子好厚",
+        "被几太厚了"
+      ],
+      "category": "daily",
+      "weight": 0.24,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.76,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "dai_060",
+      "canonical_phrase": "我想吃烧烤",
+      "variants": [
+        "想吃烧烤了",
+        "我点个烧烤",
+        "烧烤想吃了"
+      ],
+      "category": "daily",
+      "weight": 0.26,
+      "match_type": "phrase",
+      "modes": [
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_001",
+      "canonical_phrase": "没事，真的没事",
+      "variants": [
+        "真没事",
+        "我没事，真的",
+        "没事没事"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_002",
+      "canonical_phrase": "算了，就这样吧",
+      "variants": [
+        "算了就这样",
+        "算了，这样也行",
+        "那就这样吧算了"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.72,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_003",
+      "canonical_phrase": "至少我做到了",
+      "variants": [
+        "至少我做到了这一点",
+        "起码我做到了",
+        "至少这件事我成了"
+      ],
+      "category": "transition",
+      "weight": 0.65,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "objective"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_004",
+      "canonical_phrase": "我已经没有选择了",
+      "variants": [
+        "我没得选了",
+        "我没有别的选择",
+        "只能这样了"
+      ],
+      "category": "transition",
+      "weight": 0.62,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_005",
+      "canonical_phrase": "那就到这里吧",
+      "variants": [
+        "到这里吧",
+        "就到这里了",
+        "到这吧"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_006",
+      "canonical_phrase": "这次可能真的不一样",
+      "variants": [
+        "这次真的不一样",
+        "这回不一样了",
+        "可能真的不一样"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_007",
+      "canonical_phrase": "没关系的",
+      "variants": [
+        "没关系啦",
+        "没事的",
+        "不要紧"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_008",
+      "canonical_phrase": "我一个人也没事",
+      "variants": [
+        "我一个人也行",
+        "我自己没事",
+        "一个人也挺好"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.72,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_009",
+      "canonical_phrase": "习惯了",
+      "variants": [
+        "我习惯了",
+        "早就习惯了",
+        "都习惯了"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_010",
+      "canonical_phrase": "我早就习惯了",
+      "variants": [
+        "我早就习惯这样",
+        "这个我习惯了",
+        "一直都是这样"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_011",
+      "canonical_phrase": "没什么大不了的",
+      "variants": [
+        "没什么大不了",
+        "这算不了什么",
+        "不算什么"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.65,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_012",
+      "canonical_phrase": "真的没关系",
+      "variants": [
+        "真没关系",
+        "一点都没关系"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.65,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_013",
+      "canonical_phrase": "说不难过是假的",
+      "variants": [
+        "说不难受是假的",
+        "怎么可能不难过",
+        "说不心疼是假的"
+      ],
+      "category": "transition",
+      "weight": 0.65,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_014",
+      "canonical_phrase": "我其实还好",
+      "variants": [
+        "我还好啦",
+        "我其实还行",
+        "还好吧我"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.65,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_015",
+      "canonical_phrase": "就是有点累",
+      "variants": [
+        "有点累了",
+        "我就是有点累",
+        "累了"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_016",
+      "canonical_phrase": "没人会记得吧",
+      "variants": [
+        "应该没人记得",
+        "也没人会记得",
+        "谁还记得呢"
+      ],
+      "category": "transition",
+      "weight": 0.62,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.85,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_017",
+      "canonical_phrase": "反正也没人管",
+      "variants": [
+        "也没人管我",
+        "没人在乎",
+        "反正没人管"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_018",
+      "canonical_phrase": "我已经很努力了",
+      "variants": [
+        "我很努力了",
+        "我已经够努力",
+        "我真的努力了"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_019",
+      "canonical_phrase": "我不是不难过",
+      "variants": [
+        "我怎么可能不难过",
+        "不是不难过",
+        "我也会难过"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_020",
+      "canonical_phrase": "只是有点不甘心",
+      "variants": [
+        "就是有点不甘心",
+        "不太甘心",
+        "有点不甘"
+      ],
+      "category": "transition",
+      "weight": 0.62,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_021",
+      "canonical_phrase": "就这样结束也挺好",
+      "variants": [
+        "这样结束也不错",
+        "这么结束也挺好",
+        "就这样收尾也行"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.8,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_022",
+      "canonical_phrase": "该做的都做了",
+      "variants": [
+        "能做的都做了",
+        "该做的我做了",
+        "我该做的都做了"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell",
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_023",
+      "canonical_phrase": "我不怪你们",
+      "variants": [
+        "不怪你们",
+        "我不怨你们",
+        "别觉得我怪你们"
+      ],
+      "category": "transition",
+      "weight": 0.62,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.72,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_024",
+      "canonical_phrase": "别自责",
+      "variants": [
+        "别自己扛",
+        "不要自责",
+        "你们别内疚"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_025",
+      "canonical_phrase": "这不是你们的错",
+      "variants": [
+        "不是你们的错",
+        "这跟你们没关系",
+        "别怪自己"
+      ],
+      "category": "transition",
+      "weight": 0.62,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_026",
+      "canonical_phrase": "我认了",
+      "variants": [
+        "这次我认了",
+        "我认了行吧",
+        "认了吧"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_027",
+      "canonical_phrase": "我也该走了",
+      "variants": [
+        "我该走了",
+        "是时候该走了",
+        "我差不多该走"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_028",
+      "canonical_phrase": "差不多该收工了",
+      "variants": [
+        "该收工了",
+        "今天到这儿",
+        "收工吧"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.65,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_029",
+      "canonical_phrase": "以后你们自己小心",
+      "variants": [
+        "你们以后小心点",
+        "之后自己注意",
+        "往后自己多小心"
+      ],
+      "category": "transition",
+      "weight": 0.62,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_030",
+      "canonical_phrase": "我真的没事",
+      "variants": [
+        "我真没事",
+        "没事，我好着呢",
+        "我没事啊"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_031",
+      "canonical_phrase": "没什么好说的",
+      "variants": [
+        "没什么可说的",
+        "也没啥好说的",
+        "无话可说"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_032",
+      "canonical_phrase": "都过去了",
+      "variants": [
+        "已经过去了",
+        "过去就过去了",
+        "都过去啦"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_033",
+      "canonical_phrase": "我已经很满足了",
+      "variants": [
+        "我很满足了",
+        "这些我已经满足",
+        "我挺满足的"
+      ],
+      "category": "transition",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_034",
+      "canonical_phrase": "这样也好",
+      "variants": [
+        "这样也行",
+        "这样也挺好",
+        "这样吧"
+      ],
+      "category": "transition",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "tra_035",
+      "canonical_phrase": "我没什么想说的了",
+      "variants": [
+        "我没什么要说的",
+        "我说完了",
+        "我没别的想说了"
+      ],
+      "category": "transition",
+      "weight": 0.55,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_001",
+      "canonical_phrase": "我倒了",
+      "variants": [
+        "我倒地了",
+        "我躺了",
+        "我趴下了"
+      ],
+      "category": "jargon",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.6,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_002",
+      "canonical_phrase": "我趴了",
+      "variants": [
+        "我趴地上了",
+        "我趴下来",
+        "我趴着"
+      ],
+      "category": "jargon",
+      "weight": 0.7,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_003",
+      "canonical_phrase": "我没了",
+      "variants": [
+        "我人没了",
+        "我已经没了",
+        "我这就没了"
+      ],
+      "category": "jargon",
+      "weight": 0.65,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_004",
+      "canonical_phrase": "拉我一下",
+      "variants": [
+        "拉我起来",
+        "拉我一把",
+        "扶我一下"
+      ],
+      "category": "jargon",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.35,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_005",
+      "canonical_phrase": "别救了",
+      "variants": [
+        "不用救了",
+        "别救我了啊",
+        "救什么救"
+      ],
+      "category": "jargon",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_006",
+      "canonical_phrase": "救不了",
+      "variants": [
+        "这救不了",
+        "根本救不了",
+        "救不了了这波"
+      ],
+      "category": "jargon",
+      "weight": 0.72,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_007",
+      "canonical_phrase": "我来架枪",
+      "variants": [
+        "我架枪",
+        "我架一下",
+        "我架着"
+      ],
+      "category": "jargon",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_008",
+      "canonical_phrase": "没甲了",
+      "variants": [
+        "我甲没了",
+        "护甲碎了",
+        "没护甲了"
+      ],
+      "category": "jargon",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "low_hp",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_009",
+      "canonical_phrase": "没药了",
+      "variants": [
+        "我没药了",
+        "药也没了",
+        "治疗没了"
+      ],
+      "category": "jargon",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "low_hp"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_010",
+      "canonical_phrase": "这把交代了",
+      "variants": [
+        "交代了这把",
+        "这波交代",
+        "交代在这儿了"
+      ],
+      "category": "jargon",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_011",
+      "canonical_phrase": "我寄了",
+      "variants": [
+        "寄了",
+        "我这波寄了",
+        "我寄了啊"
+      ],
+      "category": "jargon",
+      "weight": 0.7,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "defeat",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_012",
+      "canonical_phrase": "你们撤",
+      "variants": [
+        "你们撤吧",
+        "都撤",
+        "赶紧撤"
+      ],
+      "category": "jargon",
+      "weight": 0.82,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_013",
+      "canonical_phrase": "我掩护",
+      "variants": [
+        "我掩护你们",
+        "我来掩护",
+        "我掩护一下"
+      ],
+      "category": "jargon",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_014",
+      "canonical_phrase": "我卡住了",
+      "variants": [
+        "我卡住动不了",
+        "我人物卡了",
+        "我卡在原地"
+      ],
+      "category": "jargon",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.65,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_015",
+      "canonical_phrase": "我在跑毒",
+      "variants": [
+        "我在毒圈里跑",
+        "我跑毒呢",
+        "毒来了我在跑"
+      ],
+      "category": "jargon",
+      "weight": 0.55,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "low_hp",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_016",
+      "canonical_phrase": "要缩圈了",
+      "variants": [
+        "圈要缩了",
+        "毒圈缩了",
+        "缩圈了快跑"
+      ],
+      "category": "jargon",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.8,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_017",
+      "canonical_phrase": "我掉帧了",
+      "variants": [
+        "掉帧掉得厉害",
+        "我 fps 很低",
+        "卡帧了"
+      ],
+      "category": "jargon",
+      "weight": 0.45,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.8,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_018",
+      "canonical_phrase": "我延迟太高",
+      "variants": [
+        "延迟爆炸了",
+        "我 ping 很高",
+        "延迟太高了"
+      ],
+      "category": "jargon",
+      "weight": 0.45,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.8,
+      "comedic_potential": 0.7,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_019",
+      "canonical_phrase": "我在掉线",
+      "variants": [
+        "我快掉线了",
+        "我掉线了",
+        "网断了"
+      ],
+      "category": "jargon",
+      "weight": 0.55,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "off_topic"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_020",
+      "canonical_phrase": "我手滑了",
+      "variants": [
+        "手滑了",
+        "我点错了",
+        "手抖了"
+      ],
+      "category": "jargon",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.8,
+      "comedic_potential": 0.65,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_021",
+      "canonical_phrase": "我误触了",
+      "variants": [
+        "误触了",
+        "我不小心按到了",
+        "手一抖"
+      ],
+      "category": "jargon",
+      "weight": 0.45,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.8,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_022",
+      "canonical_phrase": "这波必须打",
+      "variants": [
+        "这波得打",
+        "只能打了",
+        "必须开"
+      ],
+      "category": "jargon",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_023",
+      "canonical_phrase": "我开团了",
+      "variants": [
+        "我开团",
+        "我先开",
+        "我开了啊"
+      ],
+      "category": "jargon",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_024",
+      "canonical_phrase": "我开大",
+      "variants": [
+        "我大开了",
+        "我放大了",
+        "我大招上了"
+      ],
+      "category": "jargon",
+      "weight": 0.55,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_025",
+      "canonical_phrase": "我没蓝了",
+      "variants": [
+        "蓝没了",
+        "我蓝用完了",
+        "没蓝打不了"
+      ],
+      "category": "jargon",
+      "weight": 0.55,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "low_hp",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.78,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_026",
+      "canonical_phrase": "我技能没好",
+      "variants": [
+        "CD没好",
+        "我技能全空",
+        "技能都在转"
+      ],
+      "category": "jargon",
+      "weight": 0.45,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.8,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_027",
+      "canonical_phrase": "我闪现交了",
+      "variants": [
+        "闪现用了",
+        "我闪交了",
+        "闪现在转"
+      ],
+      "category": "jargon",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.8,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_028",
+      "canonical_phrase": "我这波送人头",
+      "variants": [
+        "我送一个",
+        "我白给",
+        "这波我送"
+      ],
+      "category": "jargon",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "death",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.75,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_029",
+      "canonical_phrase": "我被抓了",
+      "variants": [
+        "我被人抓了",
+        "我被抓到了",
+        "我被抓单"
+      ],
+      "category": "jargon",
+      "weight": 0.65,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "combat",
+        "death"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.72,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "jar_030",
+      "canonical_phrase": "我在打信号",
+      "variants": [
+        "我打信号了",
+        "我给信号了",
+        "标记了"
+      ],
+      "category": "jargon",
+      "weight": 0.45,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.8,
+      "comedic_potential": 0.35,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_001",
+      "canonical_phrase": "开玩笑的",
+      "variants": [
+        "我开玩笑的",
+        "开玩笑啦",
+        "开个玩笑"
+      ],
+      "category": "exclusion",
+      "weight": 0.9,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "joke"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_002",
+      "canonical_phrase": "我开玩笑",
+      "variants": [
+        "我逗你的",
+        "我说着玩",
+        "我闹着玩"
+      ],
+      "category": "exclusion",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "joke"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_003",
+      "canonical_phrase": "逗你玩",
+      "variants": [
+        "逗你们玩",
+        "逗你的",
+        "逗你们呢"
+      ],
+      "category": "exclusion",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "joke"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_004",
+      "canonical_phrase": "说着玩",
+      "variants": [
+        "说着玩的",
+        "随口说说的",
+        "就说说"
+      ],
+      "category": "exclusion",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "joke"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_005",
+      "canonical_phrase": "我引用一下",
+      "variants": [
+        "我引用一句",
+        "借用一下台词",
+        "我复述一句"
+      ],
+      "category": "exclusion",
+      "weight": 0.75,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "quote"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_006",
+      "canonical_phrase": "台词是这么说的",
+      "variants": [
+        "原台词是这样",
+        "剧里是这么说的",
+        "台词这么念"
+      ],
+      "category": "exclusion",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "quote"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_007",
+      "canonical_phrase": "这是个梗",
+      "variants": [
+        "这是梗",
+        "玩个梗",
+        "这个梗你们懂吧"
+      ],
+      "category": "exclusion",
+      "weight": 0.8,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "joke",
+        "quote"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_008",
+      "canonical_phrase": "哈哈",
+      "variants": [
+        "哈哈哈",
+        "哈哈哈哈",
+        "哈哈啊"
+      ],
+      "category": "exclusion",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "joke"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_009",
+      "canonical_phrase": "笑死",
+      "variants": [
+        "笑死我了",
+        "笑死我",
+        "笑得不行"
+      ],
+      "category": "exclusion",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "joke"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_010",
+      "canonical_phrase": "别管我吃什么",
+      "variants": [
+        "别管我吃啥",
+        "我吃什么你别管",
+        "别管我点啥"
+      ],
+      "category": "exclusion",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.6,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_011",
+      "canonical_phrase": "别管我睡觉",
+      "variants": [
+        "别管我睡多久",
+        "关我睡觉什么事",
+        "我睡觉你别管"
+      ],
+      "category": "exclusion",
+      "weight": 0.85,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_012",
+      "canonical_phrase": "我尽力了但是",
+      "variants": [
+        "我尽力了，不过",
+        "尽力了可是",
+        "我已经尽力但仍然"
+      ],
+      "category": "exclusion",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_013",
+      "canonical_phrase": "队友呢",
+      "variants": [
+        "队友在哪",
+        "队友去哪了",
+        "我的队友呢"
+      ],
+      "category": "exclusion",
+      "weight": 0.5,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat",
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_014",
+      "canonical_phrase": "什么意思",
+      "variants": [
+        "啥意思",
+        "你什么意思",
+        "这什么意思"
+      ],
+      "category": "exclusion",
+      "weight": 0.45,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "chat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_015",
+      "canonical_phrase": "我念一下",
+      "variants": [
+        "我念个句子",
+        "我读一下",
+        "念给你听"
+      ],
+      "category": "exclusion",
+      "weight": 0.7,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "quote"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_016",
+      "canonical_phrase": "刚才那句",
+      "variants": [
+        "我上句说的",
+        "刚刚那句话",
+        "前一句"
+      ],
+      "category": "exclusion",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "quote"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.4,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_017",
+      "canonical_phrase": "复述一遍",
+      "variants": [
+        "我再说一遍",
+        "重复一遍",
+        "跟着念"
+      ],
+      "category": "exclusion",
+      "weight": 0.6,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "quote"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "exc_018",
+      "canonical_phrase": "这不就是",
+      "variants": [
+        "这不就是那个",
+        "这不是那个梗吗",
+        "不就是那句话"
+      ],
+      "category": "exclusion",
+      "weight": 0.55,
+      "match_type": "phrase",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "quote",
+        "joke"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.0,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "kw_001",
+      "canonical_phrase": "别管我",
+      "variants": [
+        "别管我了",
+        "不用管我"
+      ],
+      "category": "sacrifice",
+      "weight": 0.95,
+      "match_type": "keyword",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.55,
+      "comedic_potential": 0.55,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "kw_002",
+      "canonical_phrase": "快走",
+      "variants": [
+        "快跑",
+        "赶紧走"
+      ],
+      "category": "sacrifice",
+      "weight": 0.75,
+      "match_type": "keyword",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "kw_003",
+      "canonical_phrase": "你们走",
+      "variants": [
+        "你们先走",
+        "你们走吧"
+      ],
+      "category": "teammate",
+      "weight": 0.8,
+      "match_type": "keyword",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.62,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "kw_004",
+      "canonical_phrase": "交给我",
+      "variants": [
+        "都交给我",
+        "交给我吧"
+      ],
+      "category": "sacrifice",
+      "weight": 0.72,
+      "match_type": "keyword",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "kw_005",
+      "canonical_phrase": "保重",
+      "variants": [
+        "多保重",
+        "保重啊"
+      ],
+      "category": "farewell",
+      "weight": 0.7,
+      "match_type": "keyword",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.7,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "kw_006",
+      "canonical_phrase": "我走了",
+      "variants": [
+        "我先走了",
+        "我撤了"
+      ],
+      "category": "farewell",
+      "weight": 0.6,
+      "match_type": "keyword",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "farewell"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "kw_007",
+      "canonical_phrase": "我来顶",
+      "variants": [
+        "我顶着",
+        "我扛着"
+      ],
+      "category": "sacrifice",
+      "weight": 0.8,
+      "match_type": "keyword",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate",
+        "combat"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.65,
+      "comedic_potential": 0.45,
+      "enabled": true,
+      "source": "user"
+    },
+    {
+      "id": "kw_008",
+      "canonical_phrase": "别怕",
+      "variants": [
+        "不要怕",
+        "别害怕"
+      ],
+      "category": "teammate",
+      "weight": 0.6,
+      "match_type": "keyword",
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "context_tags": [
+        "teammate"
+      ],
+      "negative_contexts": [],
+      "min_confidence": 0.75,
+      "comedic_potential": 0.5,
+      "enabled": true,
+      "source": "user"
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule_classic_sacrifice",
+      "name": "经典牺牲",
+      "requires": [
+        {
+          "kind": "category",
+          "value": "sacrifice"
+        }
+      ],
+      "any_of": [
+        {
+          "kind": "tag",
+          "value": "teammate"
+        },
+        {
+          "kind": "tag",
+          "value": "farewell"
+        }
+      ],
+      "excludes": [],
+      "window_seconds": 10.0,
+      "score_delta": 0.12,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "min_confidence": 0.0,
+      "enabled": true,
+      "comment": "当前句命中牺牲类 + 带队友/告别语境 → 智能模式加分"
+    },
+    {
+      "id": "rule_teammate_sacrifice",
+      "name": "对队友说牺牲台词",
+      "requires": [
+        {
+          "kind": "category",
+          "value": "teammate"
+        }
+      ],
+      "any_of": [
+        {
+          "kind": "category",
+          "value": "sacrifice",
+          "scope": "any"
+        },
+        {
+          "kind": "tag",
+          "value": "death",
+          "scope": "any"
+        }
+      ],
+      "excludes": [],
+      "window_seconds": 12.0,
+      "score_delta": 0.1,
+      "modes": [
+        "serious"
+      ],
+      "min_confidence": 0.0,
+      "enabled": true,
+      "comment": "当前句对队友说话，且最近也说过牺牲/死亡类台词 → 悲壮感更明确"
+    },
+    {
+      "id": "rule_defeat_summary",
+      "name": "失败后的自我总结",
+      "requires": [
+        {
+          "kind": "category",
+          "value": "defeat"
+        }
+      ],
+      "any_of": [
+        {
+          "kind": "entry",
+          "value": "far_015",
+          "scope": "any"
+        },
+        {
+          "kind": "category",
+          "value": "transition",
+          "scope": "any"
+        }
+      ],
+      "excludes": [],
+      "window_seconds": 12.0,
+      "score_delta": 0.08,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "min_confidence": 0.0,
+      "enabled": true,
+      "comment": "当前句战败类 + 近期出现「我尽力了」或情绪转折类 → 适度加分"
+    },
+    {
+      "id": "rule_daily_chaos",
+      "name": "日常废话强行升华",
+      "requires": [
+        {
+          "kind": "category",
+          "value": "daily"
+        }
+      ],
+      "any_of": [],
+      "excludes": [],
+      "window_seconds": 6.0,
+      "score_delta": 0.05,
+      "modes": [
+        "chaos"
+      ],
+      "min_confidence": 0.0,
+      "enabled": true,
+      "comment": "只在抽象整活模式生效；不绕过静音、冷却与并发保护"
+    },
+    {
+      "id": "rule_context_reversal",
+      "name": "上下文反转",
+      "requires": [
+        {
+          "kind": "category",
+          "value": "farewell",
+          "scope": "context"
+        }
+      ],
+      "any_of": [
+        {
+          "kind": "category",
+          "value": "exclusion"
+        }
+      ],
+      "excludes": [],
+      "window_seconds": 8.0,
+      "score_delta": -0.25,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "min_confidence": 0.0,
+      "enabled": true,
+      "comment": "最近说过像遗言的话，当前句却是玩笑/引用 → 视为反转，显著减分"
+    },
+    {
+      "id": "rule_tactical_callout",
+      "name": "战术报点抑制",
+      "requires": [
+        {
+          "kind": "category",
+          "value": "jargon"
+        }
+      ],
+      "any_of": [
+        {
+          "kind": "tag",
+          "value": "objective"
+        }
+      ],
+      "excludes": [],
+      "window_seconds": 6.0,
+      "score_delta": -0.1,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "min_confidence": 0.0,
+      "enabled": true,
+      "comment": "当前句是黑话且带目标/战斗语境，多半是正常报点，轻微减分"
+    },
+    {
+      "id": "rule_quote_suppression",
+      "name": "引用与玩笑抑制",
+      "requires": [
+        {
+          "kind": "category",
+          "value": "exclusion"
+        }
+      ],
+      "any_of": [
+        {
+          "kind": "category",
+          "value": "sacrifice"
+        },
+        {
+          "kind": "category",
+          "value": "farewell"
+        }
+      ],
+      "excludes": [],
+      "window_seconds": 8.0,
+      "score_delta": -0.2,
+      "modes": [
+        "serious",
+        "chaos"
+      ],
+      "min_confidence": 0.0,
+      "enabled": true,
+      "comment": "当前句同时命中引用/玩笑类与悲壮类时减分（不硬否决）"
+    }
+  ],
+  "settings": {
+    "deduplicate_variants": true,
+    "normalize_chinese_punctuation": true,
+    "default_mode": "serious",
+    "fuzzy_enabled": true,
+    "fuzzy_min_similarity": 0.82
+  }
+}

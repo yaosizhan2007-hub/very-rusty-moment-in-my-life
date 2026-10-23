@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {"id": "exc_001", "canonical_phrase": "开玩笑的", "variants": ["我开玩笑的", "开玩笑啦", "开个玩笑"], "category": "exclusion", "weight": 0.9, "modes": ["serious", "chaos"], "context_tags": ["joke"], "min_confidence": 0.0, "comedic_potential": 0.5},
+    {"id": "exc_002", "canonical_phrase": "我开玩笑", "variants": ["我逗你的", "我说着玩", "我闹着玩"], "category": "exclusion", "weight": 0.85, "modes": ["serious", "chaos"], "context_tags": ["joke"], "min_confidence": 0.0, "comedic_potential": 0.5},
+    {"id": "exc_003", "canonical_phrase": "逗你玩", "variants": ["逗你们玩", "逗你的", "逗你们呢"], "category": "exclusion", "weight": 0.85, "modes": ["serious", "chaos"], "context_tags": ["joke"], "min_confidence": 0.0, "comedic_potential": 0.55},
+    {"id": "exc_004", "canonical_phrase": "说着玩", "variants": ["说着玩的", "随口说说的", "就说说"], "category": "exclusion", "weight": 0.8, "modes": ["serious", "chaos"], "context_tags": ["joke"], "min_confidence": 0.0, "comedic_potential": 0.5},
+    {"id": "exc_005", "canonical_phrase": "我引用一下", "variants": ["我引用一句", "借用一下台词", "我复述一句"], "category": "exclusion", "weight": 0.75, "modes": ["serious", "chaos"], "context_tags": ["quote"], "min_confidence": 0.0, "comedic_potential": 0.45},
+    {"id": "exc_006", "canonical_phrase": "台词是这么说的", "variants": ["原台词是这样", "剧里是这么说的", "台词这么念"], "category": "exclusion", "weight": 0.8, "modes": ["serious", "chaos"], "context_tags": ["quote"], "min_confidence": 0.0, "comedic_potential": 0.5},
+    {"id": "exc_007", "canonical_phrase": "这是个梗", "variants": ["这是梗", "玩个梗", "这个梗你们懂吧"], "category": "exclusion", "weight": 0.8, "modes": ["serious", "chaos"], "context_tags": ["joke", "quote"], "min_confidence": 0.0, "comedic_potential": 0.55},
+    {"id": "exc_008", "canonical_phrase": "哈哈", "variants": ["哈哈哈", "哈哈哈哈", "哈哈啊"], "category": "exclusion", "weight": 0.6, "modes": ["serious", "chaos"], "context_tags": ["joke"], "min_confidence": 0.0, "comedic_potential": 0.4},
+    {"id": "exc_009", "canonical_phrase": "笑死", "variants": ["笑死我了", "笑死我", "笑得不行"], "category": "exclusion", "weight": 0.6, "modes": ["serious", "chaos"], "context_tags": ["joke"], "min_confidence": 0.0, "comedic_potential": 0.45},
+    {"id": "exc_010", "canonical_phrase": "别管我吃什么", "variants": ["别管我吃啥", "我吃什么你别管", "别管我点啥"], "category": "exclusion", "weight": 0.85, "modes": ["serious", "chaos"], "context_tags": ["chat"], "min_confidence": 0.0, "comedic_potential": 0.6},
+    {"id": "exc_011", "canonical_phrase": "别管我睡觉", "variants": ["别管我睡多久", "关我睡觉什么事", "我睡觉你别管"], "category": "exclusion", "weight": 0.85, "modes": ["serious", "chaos"], "context_tags": ["chat"], "min_confidence": 0.0, "comedic_potential": 0.55},
+    {"id": "exc_012", "canonical_phrase": "我尽力了但是", "variants": ["我尽力了，不过", "尽力了可是", "我已经尽力但仍然"], "category": "exclusion", "weight": 0.6, "modes": ["serious", "chaos"], "context_tags": ["chat"], "min_confidence": 0.0, "comedic_potential": 0.4},
+    {"id": "exc_013", "canonical_phrase": "队友呢", "variants": ["队友在哪", "队友去哪了", "我的队友呢"], "category": "exclusion", "weight": 0.5, "modes": ["serious", "chaos"], "context_tags": ["chat", "teammate"], "min_confidence": 0.0, "comedic_potential": 0.5},
+    {"id": "exc_014", "canonical_phrase": "什么意思", "variants": ["啥意思", "你什么意思", "这什么意思"], "category": "exclusion", "weight": 0.45, "modes": ["serious", "chaos"], "context_tags": ["chat"], "min_confidence": 0.0, "comedic_potential": 0.4},
+    {"id": "exc_015", "canonical_phrase": "我念一下", "variants": ["我念个句子", "我读一下", "念给你听"], "category": "exclusion", "weight": 0.7, "modes": ["serious", "chaos"], "context_tags": ["quote"], "min_confidence": 0.0, "comedic_potential": 0.45},
+    {"id": "exc_016", "canonical_phrase": "刚才那句", "variants": ["我上句说的", "刚刚那句话", "前一句"], "category": "exclusion", "weight": 0.6, "modes": ["serious", "chaos"], "context_tags": ["quote"], "min_confidence": 0.0, "comedic_potential": 0.4},
+    {"id": "exc_017", "canonical_phrase": "复述一遍", "variants": ["我再说一遍", "重复一遍", "跟着念"], "category": "exclusion", "weight": 0.6, "modes": ["serious", "chaos"], "context_tags": ["quote"], "min_confidence": 0.0, "comedic_potential": 0.45},
+    {"id": "exc_018", "canonical_phrase": "这不就是", "variants": ["这不就是那个", "这不是那个梗吗", "不就是那句话"], "category": "exclusion", "weight": 0.55, "modes": ["serious", "chaos"], "context_tags": ["quote", "joke"], "min_confidence": 0.0, "comedic_potential": 0.5}
+  ]
+}

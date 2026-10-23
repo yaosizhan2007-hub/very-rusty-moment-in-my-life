@@ -121,6 +121,8 @@ def test_pipeline_survives_recognizer_failure():
         recognizer_error=RecognizerError("模型缺失")
     )
     holder["cfg"].trigger.probabilities["serious"] = 0.0  # 只验证不崩溃
+    # 低置信度档也要归零，否则合成分落在 0.35~0.5 时会随机触发
+    holder["cfg"].trigger.probabilities["low_confidence"] = 0.0
     pipeline.start()
     try:
         assert wait_until(lambda: any(status.kind == "rejected" for status in statuses))
@@ -137,6 +139,8 @@ def test_pipeline_requires_stt_enabled_to_be_useful():
         config=config, stt_enabled=False
     )
     holder["cfg"].trigger.probabilities["serious"] = 0.0
+    # 低置信度档也要归零，否则合成分落在 0.35~0.5 时会随机触发
+    holder["cfg"].trigger.probabilities["low_confidence"] = 0.0
     pipeline.start()
     try:
         assert wait_until(lambda: any(status.kind == "rejected" for status in statuses))
@@ -184,6 +188,8 @@ def test_vad_config_follows_sensitivity():
 def test_empty_transcript_does_not_trigger(text):
     pipeline, _capture, _recognizer, decisions, statuses, holder = build_pipeline(text=text)
     holder["cfg"].trigger.probabilities["serious"] = 0.0
+    # 低置信度档也要归零，否则合成分落在 0.35~0.5 时会随机触发
+    holder["cfg"].trigger.probabilities["low_confidence"] = 0.0
     pipeline.start()
     try:
         assert wait_until(lambda: any(status.kind == "rejected" for status in statuses))
@@ -241,6 +247,9 @@ def test_pipeline_falls_back_when_ai_fails():
     config.ai.model = "fake-model"
     # 关键词强命中会走快速通道跳过 AI，这里要验证 AI 失败路径，所以关掉关键词层
     config.keywords.enabled = False
+    # 只剩规则层时分数偏低，把两个阈值降到 0，让本用例只验证「AI 缺失时的降级路径」
+    config.trigger.trigger_threshold = 0.0
+    config.trigger.low_confidence_threshold = 0.0
     # AI 启用但结果缺失时会走 ai_unavailable 概率档，这里固定成 100% 以免抽样造成 flaky
     config.trigger.probabilities["ai_unavailable"] = 1.0
     pipeline, _capture, _recognizer, decisions, statuses, holder = build_pipeline(

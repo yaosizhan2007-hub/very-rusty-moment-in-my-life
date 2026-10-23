@@ -1,0 +1,92 @@
+{
+  "rules": [
+    {
+      "id": "rule_classic_sacrifice",
+      "name": "经典牺牲",
+      "comment": "当前句命中牺牲类 + 带队友/告别语境 → 智能模式加分",
+      "requires": [{"kind": "category", "value": "sacrifice", "scope": "current"}],
+      "any_of": [
+        {"kind": "tag", "value": "teammate", "scope": "current"},
+        {"kind": "tag", "value": "farewell", "scope": "current"}
+      ],
+      "window_seconds": 10.0,
+      "score_delta": 0.12,
+      "modes": ["serious", "chaos"],
+      "enabled": true
+    },
+    {
+      "id": "rule_teammate_sacrifice",
+      "name": "对队友说牺牲台词",
+      "comment": "当前句对队友说话，且最近也说过牺牲/死亡类台词 → 悲壮感更明确",
+      "requires": [{"kind": "category", "value": "teammate", "scope": "current"}],
+      "any_of": [
+        {"kind": "category", "value": "sacrifice", "scope": "any"},
+        {"kind": "tag", "value": "death", "scope": "any"}
+      ],
+      "window_seconds": 12.0,
+      "score_delta": 0.10,
+      "modes": ["serious"],
+      "enabled": true
+    },
+    {
+      "id": "rule_defeat_summary",
+      "name": "失败后的自我总结",
+      "comment": "当前句战败类 + 近期出现「我尽力了」或情绪转折类 → 适度加分",
+      "requires": [{"kind": "category", "value": "defeat", "scope": "current"}],
+      "any_of": [
+        {"kind": "entry", "value": "far_015", "scope": "any"},
+        {"kind": "category", "value": "transition", "scope": "any"}
+      ],
+      "window_seconds": 12.0,
+      "score_delta": 0.08,
+      "modes": ["serious", "chaos"],
+      "enabled": true
+    },
+    {
+      "id": "rule_daily_chaos",
+      "name": "日常废话强行升华",
+      "comment": "只在抽象整活模式生效；不绕过静音、冷却与并发保护",
+      "requires": [{"kind": "category", "value": "daily", "scope": "current"}],
+      "window_seconds": 6.0,
+      "score_delta": 0.05,
+      "modes": ["chaos"],
+      "enabled": true
+    },
+    {
+      "id": "rule_context_reversal",
+      "name": "上下文反转",
+      "comment": "最近说过像遗言的话，当前句却是玩笑/引用 → 视为反转，显著减分",
+      "requires": [{"kind": "category", "value": "farewell", "scope": "context"}],
+      "any_of": [{"kind": "category", "value": "exclusion", "scope": "current"}],
+      "window_seconds": 8.0,
+      "score_delta": -0.25,
+      "modes": ["serious", "chaos"],
+      "enabled": true
+    },
+    {
+      "id": "rule_tactical_callout",
+      "name": "战术报点抑制",
+      "comment": "当前句是黑话且带目标/战斗语境，多半是正常报点，轻微减分",
+      "requires": [{"kind": "category", "value": "jargon", "scope": "current"}],
+      "any_of": [{"kind": "tag", "value": "objective", "scope": "current"}],
+      "window_seconds": 6.0,
+      "score_delta": -0.10,
+      "modes": ["serious", "chaos"],
+      "enabled": true
+    },
+    {
+      "id": "rule_quote_suppression",
+      "name": "引用与玩笑抑制",
+      "comment": "当前句同时命中引用/玩笑类与悲壮类时减分（不硬否决）",
+      "requires": [{"kind": "category", "value": "exclusion", "scope": "current"}],
+      "any_of": [
+        {"kind": "category", "value": "sacrifice", "scope": "current"},
+        {"kind": "category", "value": "farewell", "scope": "current"}
+      ],
+      "window_seconds": 8.0,
+      "score_delta": -0.20,
+      "modes": ["serious", "chaos"],
+      "enabled": true
+    }
+  ]
+}

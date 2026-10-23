@@ -46,6 +46,10 @@ class CandidateEvent:
     ai_error: str = ""
     transcript_source: str = "none"
     at: float = 0.0
+    rule_delta: float = 0.0
+    """组合规则给出的加减分（阶段 3 引入）；0 表示没有规则命中或未启用。"""
+    rule_reasons: list[str] = field(default_factory=list)
+    """命中的组合规则说明，用于日志与 GUI 解释。"""
 
 
 @dataclass
@@ -61,9 +65,13 @@ class TriggerDecision:
     rejected_by: str = ""
     event_id: str = ""
     tier: str = ""
+    rule_delta: float = 0.0
+    rule_reasons: list[str] = field(default_factory=list)
 
     def describe(self) -> str:
-        return f"{self.reason}（合成分 {self.combined:.2f}，概率 {self.probability:.0%}）"
+        suffix = f"含规则 {self.rule_delta:+.2f}" if self.rule_delta else ""
+        extra = f"，{suffix}" if suffix else ""
+        return f"{self.reason}（合成分 {self.combined:.2f}{extra}，概率 {self.probability:.0%}）"
 
 
 class DedupeTracker:
@@ -146,6 +154,9 @@ class TriggerEngine:
         weights = self._active_weights(scores, cfg)
         total_weight = sum(weights.values())
         combined = sum(scores[key] * weights[key] for key in scores) / total_weight
+        # 组合规则只在已有分析结果时叠加（没有分数就没有事件可加分）
+        if candidate.rule_delta:
+            combined += candidate.rule_delta
         combined = max(0.0, min(1.0, combined))
 
         probability, tier, eligible = self._select_probability(
@@ -164,6 +175,8 @@ class TriggerEngine:
             decision.scores = scores
             decision.weighted = {key: scores[key] * weights[key] / total_weight for key in scores}
             decision.tier = tier
+            decision.rule_delta = candidate.rule_delta
+            decision.rule_reasons = list(candidate.rule_reasons)
             return decision
 
         if not trigger:
@@ -179,9 +192,13 @@ class TriggerEngine:
             decision.probability = probability
             decision.sampled = True
             decision.tier = tier
+            decision.rule_delta = candidate.rule_delta
+            decision.rule_reasons = list(candidate.rule_reasons)
             return decision
 
         detail = self._describe_layers(candidate, scores, weights)
+        if candidate.rule_reasons:
+            detail = f"{detail}；规则：{'、'.join(candidate.rule_reasons)}"
         reason = f"触发（{detail}）"
         decision = TriggerDecision(
             trigger=True,
@@ -194,6 +211,8 @@ class TriggerEngine:
             sampled=sampled,
             event_id=uuid.uuid4().hex[:12],
             tier=tier,
+            rule_delta=candidate.rule_delta,
+            rule_reasons=list(candidate.rule_reasons),
         )
         if candidate.text:
             self._dedupe.remember(candidate.text)

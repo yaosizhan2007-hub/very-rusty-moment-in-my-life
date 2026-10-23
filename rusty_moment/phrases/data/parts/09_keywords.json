@@ -1,0 +1,12 @@
+{
+  "entries": [
+    {"id": "kw_001", "canonical_phrase": "别管我", "variants": ["别管我了", "不用管我"], "category": "sacrifice", "weight": 0.95, "match_type": "keyword", "modes": ["serious", "chaos"], "context_tags": ["teammate", "farewell"], "min_confidence": 0.55, "comedic_potential": 0.55},
+    {"id": "kw_002", "canonical_phrase": "快走", "variants": ["快跑", "赶紧走"], "category": "sacrifice", "weight": 0.75, "match_type": "keyword", "modes": ["serious", "chaos"], "context_tags": ["teammate", "farewell"], "min_confidence": 0.65, "comedic_potential": 0.45},
+    {"id": "kw_003", "canonical_phrase": "你们走", "variants": ["你们先走", "你们走吧"], "category": "teammate", "weight": 0.8, "match_type": "keyword", "modes": ["serious", "chaos"], "context_tags": ["teammate", "farewell"], "min_confidence": 0.62, "comedic_potential": 0.45},
+    {"id": "kw_004", "canonical_phrase": "交给我", "variants": ["都交给我", "交给我吧"], "category": "sacrifice", "weight": 0.72, "match_type": "keyword", "modes": ["serious", "chaos"], "context_tags": ["teammate"], "min_confidence": 0.7, "comedic_potential": 0.5},
+    {"id": "kw_005", "canonical_phrase": "保重", "variants": ["多保重", "保重啊"], "category": "farewell", "weight": 0.7, "match_type": "keyword", "modes": ["serious", "chaos"], "context_tags": ["farewell"], "min_confidence": 0.7, "comedic_potential": 0.5},
+    {"id": "kw_006", "canonical_phrase": "我走了", "variants": ["我先走了", "我撤了"], "category": "farewell", "weight": 0.6, "match_type": "keyword", "modes": ["serious", "chaos"], "context_tags": ["farewell"], "min_confidence": 0.75, "comedic_potential": 0.45},
+    {"id": "kw_007", "canonical_phrase": "我来顶", "variants": ["我顶着", "我扛着"], "category": "sacrifice", "weight": 0.8, "match_type": "keyword", "modes": ["serious", "chaos"], "context_tags": ["teammate", "combat"], "min_confidence": 0.65, "comedic_potential": 0.45},
+    {"id": "kw_008", "canonical_phrase": "别怕", "variants": ["不要怕", "别害怕"], "category": "teammate", "weight": 0.6, "match_type": "keyword", "modes": ["serious", "chaos"], "context_tags": ["teammate"], "min_confidence": 0.75, "comedic_potential": 0.5}
+  ]
+}
