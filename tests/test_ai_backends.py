@@ -239,6 +239,76 @@ def test_build_analyzer_respects_config():
     )
     assert isinstance(local, LocalLLMAnalyzer)
 
+
+# --------------------------------------------------------------------------- #
+# temperature 兼容性：Claude 5 系等新模型直接拒绝该参数
+# --------------------------------------------------------------------------- #
+def test_temperature_rejected_retries_without_it():
+    payloads: list[dict] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        body = json.loads(request.content)
+        payloads.append(body)
+        if "temperature" in body:
+            return httpx.Response(
+                400,
+                json={
+                    "error": {
+                        "code": "invalid_request_error",
+                        "message": "`temperature` is deprecated for this model.",
+                        "type": "invalid_request",
+                    }
+                },
+            )
+        return httpx.Response(200, json={"choices": [{"message": {"content": json.dumps(VALID)}}]})
+
+    analyzer = make_analyzer(handler)
+    scores = analyzer.analyze("兄弟，别管我，你们快走")
+
+    assert scores.dramatic_score == pytest.approx(0.92)
+    assert len(payloads) == 2, "应当只重试一次"
+    assert "temperature" in payloads[0]
+    assert "temperature" not in payloads[1]
+
+    # 记住这次拒绝，后续请求不再浪费一个 400
+    analyzer.analyze("第二句")
+    assert "temperature" not in payloads[2]
+
+
+def test_temperature_kept_when_service_accepts_it():
+    payloads: list[dict] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        payloads.append(json.loads(request.content))
+        return httpx.Response(200, json={"choices": [{"message": {"content": json.dumps(VALID)}}]})
+
+    make_analyzer(handler).analyze("别管我")
+    assert payloads[0]["temperature"] == 0.0
+
+
+def test_temperature_none_is_never_sent():
+    payloads: list[dict] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        payloads.append(json.loads(request.content))
+        return httpx.Response(200, json={"choices": [{"message": {"content": json.dumps(VALID)}}]})
+
+    make_analyzer(handler, temperature=None).analyze("别管我")
+    assert "temperature" not in payloads[0]
+
+
+def test_unrelated_400_is_not_retried():
+    calls: list[httpx.Request] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        calls.append(request)
+        return httpx.Response(400, json={"error": {"message": "model not found"}})
+
+    with pytest.raises(AnalysisError) as excinfo:
+        make_analyzer(handler).analyze("别管我")
+    assert len(calls) == 1, "与 temperature 无关的 400 不该重试"
+    assert "400" in str(excinfo.value)
+
     cloud = build_analyzer(
         AIConfig(enabled=True, backend="openai_compatible", model="gpt-4o-mini"),
         lambda: "secret-key",

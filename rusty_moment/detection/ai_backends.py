@@ -90,7 +90,7 @@ class OpenAICompatibleAnalyzer:
         api_key: str = "",
         timeout: float = 4.0,
         max_tokens: int = 1200,
-        temperature: float = 0.0,
+        temperature: float | None = 0.0,
         system_prompt: str = "",
         http_client: Any = None,
         require_api_key: bool = True,
@@ -102,6 +102,8 @@ class OpenAICompatibleAnalyzer:
         self.timeout = max(0.5, float(timeout))
         self.max_tokens = max_tokens
         self.temperature = temperature
+        # 某些新模型（Claude 5 系等）直接拒绝 temperature：先按默认发，被拒后自动关闭。
+        self._send_temperature = temperature is not None
         self.system_prompt = (system_prompt or DEFAULT_SYSTEM_PROMPT).strip()
         self._client = http_client
         self._require_api_key = require_api_key
@@ -141,30 +143,29 @@ class OpenAICompatibleAnalyzer:
     def analyze(self, text: str, context: list[str] | None = None) -> EmotionScores:
         if not self.available:
             raise AnalysisUnavailable(self.unavailable_reason or "AI 未配置")
-        payload = self._build_payload(text, context or [])
+        recent = list(context or [])
         url = chat_completions_url(self.base_url)
         if not url:  # pragma: no cover - available 已挡住
             raise AnalysisUnavailable("AI 服务地址无效")
 
-        import httpx
-
-        headers = {"Content-Type": "application/json"}
-        if self.api_key:
-            headers["Authorization"] = f"Bearer {self.api_key}"
-        try:
-            response = self._http().post(url, json=payload, headers=headers, timeout=self.timeout)
-        except httpx.TimeoutException as exc:
-            raise AnalysisError(f"AI 请求超时（{self.timeout:.1f}s）") from exc
-        except Exception as exc:  # 连接失败、DNS、代理…
-            raise AnalysisError(f"AI 请求失败：{exc}") from exc
-
+        response = self._post(url, text, recent)
         status = int(getattr(response, "status_code", 0) or 0)
+        # 服务端明确说不支持 temperature：去掉该参数重试一次，之后本进程内不再发送，
+        # 避免每句话都白跑一个 400。
+        if status == 400 and self._send_temperature:
+            detail = str(getattr(response, "text", "")).lower()
+            if "temperature" in detail:
+                log.info("AI 服务不接受 temperature 参数，去掉后重试")
+                self._send_temperature = False
+                response = self._post(url, text, recent)
+                status = int(getattr(response, "status_code", 0) or 0)
+
         if status in (401, 403):
             raise AnalysisError("AI 认证失败（API Key 无效或无权限）")
         if status == 404:
             raise AnalysisError(f"AI 接口不存在：{url}（检查地址与 /v1）")
         if status >= 400:
-            excerpt = str(getattr(response, "text", ""))[:120]
+            excerpt = " ".join(str(getattr(response, "text", "")).split())[:240]
             raise AnalysisError(f"AI 服务返回 {status}：{excerpt}")
 
         try:
@@ -177,6 +178,20 @@ class OpenAICompatibleAnalyzer:
         log.info("AI 分析完成：%s", scores.describe())
         return scores
 
+    def _post(self, url: str, text: str, recent: list[str]) -> Any:
+        import httpx
+
+        payload = self._build_payload(text, recent)
+        headers = {"Content-Type": "application/json"}
+        if self.api_key:
+            headers["Authorization"] = f"Bearer {self.api_key}"
+        try:
+            return self._http().post(url, json=payload, headers=headers, timeout=self.timeout)
+        except httpx.TimeoutException as exc:
+            raise AnalysisError(f"AI 请求超时（{self.timeout:.1f}s）") from exc
+        except Exception as exc:  # 连接失败、DNS、代理…
+            raise AnalysisError(f"AI 请求失败：{exc}") from exc
+
     # -- 内部 --------------------------------------------------------------- #
     def _build_payload(self, text: str, context: list[str]) -> dict[str, Any]:
         user_parts = []
@@ -188,13 +203,14 @@ class OpenAICompatibleAnalyzer:
         user_parts.append('请只输出一个 JSON 对象，例如 {"dramatic_score":0.1,"context_score":0.1,"comedic_potential":0.9,"confidence":0.8,"reason":"普通闲聊"}')
         payload: dict[str, Any] = {
             "model": self.model,
-            "temperature": self.temperature,
             "max_tokens": self.max_tokens,
             "messages": [
                 {"role": "system", "content": self.system_prompt},
                 {"role": "user", "content": "\n\n".join(user_parts)},
             ],
         }
+        if self._send_temperature and self.temperature is not None:
+            payload["temperature"] = self.temperature
         if self.use_json_mode:
             payload["response_format"] = {"type": "json_object"}
         return payload
