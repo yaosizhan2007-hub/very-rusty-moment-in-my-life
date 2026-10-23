@@ -149,14 +149,29 @@ def run_checks(check_tracks: bool = True, decode: bool = True) -> int:
     lines_out.append("结论：" + ("关键项全部通过" if critical_failed == 0 else f"有 {critical_failed} 个关键项失败"))
 
     text = "\n".join(lines_out)
-    print(text)
+    # 先落盘再打印：Windows 控制台是 GBK，打印 ✅ 可能抛异常，
+    # 但自检结果不能因此丢失。
+    saved: Path | None = None
     try:
         from .utils.logging_setup import default_log_dir
 
         target = default_log_dir() / "self-check.txt"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(text, encoding="utf-8")
-        print(f"\n（自检结果已写入 {target}）")
+        saved = target
     except Exception:  # pragma: no cover - 写文件失败不影响退出码
         pass
+
+    try:
+        print(text)
+        if saved is not None:
+            print(f"\n（自检结果已写入 {saved}）")
+    except Exception as exc:  # noqa: BLE001 - 控制台编码问题不该影响退出码
+        detail = f"控制台输出失败（{exc}）"
+        if saved is not None:
+            detail += f"，结果已写入 {saved}"
+        try:
+            sys.stderr.write(detail + "\n")
+        except Exception:  # pragma: no cover
+            pass
     return 0 if critical_failed == 0 else 1
