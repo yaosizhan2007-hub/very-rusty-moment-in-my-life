@@ -34,6 +34,10 @@ class EmotionScores:
     comedic_potential: float
     reason: str
     confidence: float
+    corrected_text: str = ""
+    """AI 按上下文纠正后的句子（语音识别常出现同音字错误）；为空表示无需纠正。"""
+    transcript_quality: float = 1.0
+    """这段转写像不像可信的中文语句（0=噪声/幻觉，1=清晰完整）。"""
 
     @property
     def score(self) -> float:
@@ -46,10 +50,16 @@ class EmotionScores:
         return _clamp(base * max(0.2, _clamp(self.confidence)))
 
     def describe(self) -> str:
+        extra = ""
+        if self.corrected_text:
+            extra += f"，纠正为「{self.corrected_text}」"
+        if self.transcript_quality < 0.5:
+            extra += f"，转写可信度 {self.transcript_quality:.2f}"
         return (
             f"AI：悲壮 {self.dramatic_score:.2f} / 上下文 {self.context_score:.2f} / "
             f"喜剧潜力 {self.comedic_potential:.2f} / 置信 {self.confidence:.2f}"
             + (f"（{self.reason}）" if self.reason else "")
+            + extra
         )
 
 
@@ -95,12 +105,25 @@ def parse_scores(payload: dict[str, Any]) -> EmotionScores:
         _clamp(payload["confidence"], 0.0, 100.0),
     ]
     dramatic, context, comedic, confidence = _normalize_scale(raw_values)
+
+    corrected = payload.get("corrected_text", "")
+    if not isinstance(corrected, str):
+        corrected = ""
+    corrected = corrected.strip()
+    if corrected and len(corrected) > 120:  # 模型偶尔会写解释，截断保护
+        corrected = corrected[:120]
+
+    quality_raw = _clamp(payload.get("transcript_quality", 1.0), 0.0, 100.0)
+    quality = quality_raw / 10.0 if quality_raw > 1.0 else quality_raw
+
     return EmotionScores(
         dramatic_score=_clamp(dramatic),
         context_score=_clamp(context),
         comedic_potential=_clamp(comedic),
         reason=reason[:200],
         confidence=_clamp(confidence),
+        corrected_text=corrected,
+        transcript_quality=_clamp(quality),
     )
 
 

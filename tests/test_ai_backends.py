@@ -320,3 +320,37 @@ def test_unrelated_400_is_not_retried():
         AIConfig(enabled=True, backend="openai_compatible", model="gpt-4o-mini"), lambda: ""
     )
     assert cloud_no_key.available is False
+
+
+# --------------------------------------------------------------------------- #
+# AI 返回的纠错字段（AI 后置过滤）
+# --------------------------------------------------------------------------- #
+def _parse(payload):
+    from rusty_moment.detection.emotion_analyzer import parse_scores
+
+    return parse_scores(payload)
+
+
+def test_parse_scores_reads_correction_fields():
+    scores = _parse({**VALID, "corrected_text": "别管我，你们快走", "transcript_quality": 0.6})
+    assert scores.corrected_text == "别管我，你们快走"
+    assert scores.transcript_quality == pytest.approx(0.6)
+
+
+def test_parse_scores_defaults_when_fields_missing():
+    scores = _parse(dict(VALID))
+    assert scores.corrected_text == "", "老模型不返回该字段时应视为无需纠正"
+    assert scores.transcript_quality == 1.0, "缺失时按可信处理，避免误丢句子"
+
+
+def test_parse_scores_normalizes_ten_point_quality():
+    assert _parse({**VALID, "transcript_quality": 7}).transcript_quality == pytest.approx(0.7)
+
+
+def test_parse_scores_truncates_long_correction():
+    long_text = "啊" * 200
+    assert len(_parse({**VALID, "corrected_text": long_text}).corrected_text) == 120
+
+
+def test_parse_scores_ignores_non_string_correction():
+    assert _parse({**VALID, "corrected_text": 123}).corrected_text == ""

@@ -272,6 +272,50 @@ class DetectionPipeline:
             else:
                 ai_error = "AI 未就绪（缺 key 或未配置模型）"
 
+        # ---- AI 后置：转写质量过滤 + 同音字纠正 ----
+        if ai_scores is not None and cfg.stt.enabled:
+            quality = float(ai_scores.transcript_quality)
+            if quality < cfg.stt.min_transcript_quality:
+                log.info(
+                    "转写质量过低（%.2f < %.2f），丢弃这一句",
+                    quality,
+                    cfg.stt.min_transcript_quality,
+                )
+                self._set_status(
+                    "rejected",
+                    f"转写不可信（AI 质量 {quality:.2f}），已丢弃",
+                    text=text if cfg.privacy.show_transcript_in_ui else "",
+                    duration=utterance.duration_s,
+                )
+                if self._sm is not None and self._sm.state == EventState.CANDIDATE:
+                    try:
+                        self._sm.transition(EventState.IDLE, "转写不可信")
+                    except Exception:  # pragma: no cover
+                        log.debug("候选回 idle 失败", exc_info=True)
+                return
+
+            corrected = (ai_scores.corrected_text or "").strip()
+            if cfg.stt.correct_with_ai and corrected and corrected != text:
+                if self._phrase_matcher is not None and getattr(cfg, "phrases", None) is not None and cfg.phrases.enabled:
+                    before = keyword.score if keyword is not None else 0.0
+                    again = self._phrase_matcher.analyze(corrected, mode=cfg.mode.current)
+                    if again.score > before:
+                        log.info(
+                            "AI 纠正转写「%s」→「%s」，匹配 %.2f → %.2f（%s）",
+                            text,
+                            corrected,
+                            before,
+                            again.score,
+                            again.hit_text or "无命中",
+                        )
+                        keyword = again
+                        if self._rule_engine is not None and cfg.phrases.use_combination_rules:
+                            outcome = self._rule_engine.evaluate(
+                                mode=cfg.mode.current, phrase=again, context=self._context
+                            )
+                            rule_delta = outcome.total_delta
+                            rule_reasons = [match.describe() for match in outcome.matches]
+
         if text:
             self._recent_texts.append(text)
 

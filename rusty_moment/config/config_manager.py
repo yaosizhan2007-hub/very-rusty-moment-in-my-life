@@ -602,6 +602,12 @@ class STTConfig:
     model_dir: str = ""
     compute_type: str = "int8"
     initial_prompt: str = "以下是普通话的句子。"
+    hotwords_enabled: bool = True
+    """把词库里的高频短词拼进 whisper 的 initial_prompt，用来提高专有表达的识别率。"""
+    correct_with_ai: bool = True
+    """AI 层开启时，用它的 corrected_text 纠正同音字，并用纠正后的文本重跑一次匹配。"""
+    min_transcript_quality: float = 0.3
+    """AI 判断「这段转写有多像人话」低于该值时，整句丢弃（噪声/幻觉过滤）。"""
 
     @classmethod
     def from_dict(cls, raw: Any, issues: list[str]) -> "STTConfig":
@@ -623,6 +629,11 @@ class STTConfig:
             model_dir=_as_str(raw.get("model_dir", ""), "").strip(),
             compute_type=compute,
             initial_prompt=_as_str(raw.get("initial_prompt", default.initial_prompt), default.initial_prompt),
+            hotwords_enabled=_as_bool(raw.get("hotwords_enabled", True), True),
+            correct_with_ai=_as_bool(raw.get("correct_with_ai", True), True),
+            min_transcript_quality=_as_float(
+                raw.get("min_transcript_quality", 0.3), 0.3, 0.0, 1.0
+            ),
         )
 
 

@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import logging
 import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any
 
@@ -82,6 +82,8 @@ class ApplicationContext:
     keywords: KeywordDetector | None = None
     rules: RuleAnalyzer | None = None
     trigger_engine: TriggerEngine | None = None
+    phrase_library: Any = None
+    """结构化词库（阶段 2/3），供重建识别器时生成热词提示。"""
     capture: MicrophoneCapture | None = None
     recognizer: SpeechRecognizer | None = None
     ai_analyzer: Any = None
@@ -165,7 +167,17 @@ class ApplicationContext:
         if signature == self.recognizer_signature and self.recognizer is not None:
             return
         model_dir = self.config.stt.model_dir or None
-        self.recognizer = build_recognizer(self.config.stt, model_dir=model_dir)
+        stt_config = self.config.stt
+        # 词库热词：把高频短表达塞进 whisper 的 initial_prompt，提高专有词识别率
+        if stt_config.hotwords_enabled and self.phrase_library is not None:
+            from .phrases.hotwords import build_stt_hint, merge_prompt
+
+            hint = build_stt_hint(self.phrase_library)
+            merged = merge_prompt(stt_config.initial_prompt, hint)
+            if merged and merged != stt_config.initial_prompt:
+                stt_config = replace(stt_config, initial_prompt=merged)
+                log.info("语音识别提示词已加入词库热词（%d 字）", len(merged))
+        self.recognizer = build_recognizer(stt_config, model_dir=model_dir)
         self.recognizer_signature = signature
         if self.detection is not None:
             self.detection.update_components(recognizer=self.recognizer)
@@ -386,6 +398,7 @@ def build_context(
         capture=capture,
         ai_analyzer=ai_analyzer,
         detection=detection,
+        phrase_library=library,
     )
     ctx.rebuild_recognizer()
     ctx.rebuild_analyzer()

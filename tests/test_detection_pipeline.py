@@ -45,6 +45,9 @@ def build_pipeline(
     stt_enabled: bool = True,
     ai_analyzer=None,
     audio: np.ndarray | None = None,
+    phrase_matcher=None,
+    rule_engine=None,
+    context_tracker=None,
 ):
     cfg = config or AppConfig()
     cfg.mic.sample_rate = SR
@@ -72,6 +75,9 @@ def build_pipeline(
         state_machine=state_machine,
         on_status=statuses.append,
         on_trigger=lambda decision, candidate: decisions.append((decision, candidate)),
+        phrase_matcher=phrase_matcher,
+        rule_engine=rule_engine,
+        context_tracker=context_tracker,
     )
     return pipeline, capture, recognizer, decisions, statuses, holder
 
@@ -247,14 +253,15 @@ def test_pipeline_falls_back_when_ai_fails():
     config.ai.model = "fake-model"
     # 关键词强命中会走快速通道跳过 AI，这里要验证 AI 失败路径，所以关掉关键词层
     config.keywords.enabled = False
-    # 只剩规则层时分数偏低，把两个阈值降到 0，让本用例只验证「AI 缺失时的降级路径」
-    config.trigger.trigger_threshold = 0.0
-    config.trigger.low_confidence_threshold = 0.0
     # AI 启用但结果缺失时会走 ai_unavailable 概率档，这里固定成 100% 以免抽样造成 flaky
     config.trigger.probabilities["ai_unavailable"] = 1.0
     pipeline, _capture, _recognizer, decisions, statuses, holder = build_pipeline(
         config=config, ai_analyzer=analyzer
     )
+    # build_pipeline 会重置阈值，所以必须在拿到 holder 之后再压到 0：
+    # 本用例只验证「AI 缺失时仍能按降级档触发」，与分数高低无关
+    holder["cfg"].trigger.trigger_threshold = 0.0
+    holder["cfg"].trigger.low_confidence_threshold = 0.0
     pipeline.start()
     try:
         assert wait_until(lambda: decisions)
@@ -266,3 +273,115 @@ def test_pipeline_falls_back_when_ai_fails():
     assert "ai" not in decision.scores
     assert decision.trigger, "AI 缺失时应按 ai_unavailable 档照常触发"
     assert "超时" in candidate.ai_error
+
+
+# --------------------------------------------------------------------------- #
+# AI 后置：同音字纠正 + 转写质量过滤
+# --------------------------------------------------------------------------- #
+def _builtin_matcher():
+    from rusty_moment.phrases import load_builtin
+    from rusty_moment.phrases.matcher import PhraseMatcher
+
+    return PhraseMatcher(load_builtin())
+
+
+def test_pipeline_uses_ai_corrected_text():
+    """识别成「别管窝」时词库匹配不到；AI 纠正后应重新匹配并命中。"""
+    from fakes import FakeAnalyzer
+    from rusty_moment.detection.emotion_analyzer import EmotionScores
+
+    analyzer = FakeAnalyzer(
+        scores=EmotionScores(
+            dramatic_score=0.9,
+            context_score=0.9,
+            comedic_potential=0.4,
+            reason="纠正同音字",
+            confidence=0.9,
+            corrected_text="兄弟，别管我，你们快走",
+        )
+    )
+    config = AppConfig()
+    config.ai.enabled = True
+    config.ai.backend = "local_llm"
+    config.ai.model = "fake-model"
+    pipeline, _capture, _recognizer, decisions, statuses, holder = build_pipeline(
+        text="兄弟，别管窝，你快溜",  # 词库里没有这条，纠正前不该命中
+        config=config,
+        ai_analyzer=analyzer,
+        phrase_matcher=_builtin_matcher(),
+    )
+    pipeline.start()
+    try:
+        assert wait_until(lambda: decisions)
+    finally:
+        pipeline.stop()
+
+    decision, candidate = decisions[0]
+    assert candidate.keyword is not None
+    assert candidate.keyword.score > 0, "应改用纠正后的文本重新匹配"
+    assert "别管我" in candidate.keyword.hit_text or candidate.keyword.score > 0.8
+
+
+def test_pipeline_drops_low_quality_transcript():
+    """AI 判断这段转写不像人话时，整句丢弃，不进入评分。"""
+    from fakes import FakeAnalyzer
+    from rusty_moment.detection.emotion_analyzer import EmotionScores
+
+    analyzer = FakeAnalyzer(
+        scores=EmotionScores(
+            dramatic_score=0.0,
+            context_score=0.0,
+            comedic_potential=0.0,
+            reason="噪声",
+            confidence=0.9,
+            transcript_quality=0.05,
+        )
+    )
+    config = AppConfig()
+    config.ai.enabled = True
+    config.ai.backend = "local_llm"
+    config.ai.model = "fake-model"
+    config.stt.min_transcript_quality = 0.3
+    pipeline, _capture, _recognizer, decisions, statuses, holder = build_pipeline(
+        text="嗯那个呃呃那个就是那个",
+        config=config,
+        ai_analyzer=analyzer,
+        phrase_matcher=_builtin_matcher(),
+    )
+    pipeline.start()
+    try:
+        assert wait_until(lambda: any("转写不可信" in s.message for s in statuses))
+    finally:
+        pipeline.stop()
+    assert not decisions, "低质量转写不应产生事件"
+
+
+def test_pipeline_keeps_good_transcript():
+    """质量正常的句子不受过滤器影响。"""
+    from fakes import FakeAnalyzer
+    from rusty_moment.detection.emotion_analyzer import EmotionScores
+
+    analyzer = FakeAnalyzer(
+        scores=EmotionScores(
+            dramatic_score=0.9,
+            context_score=0.9,
+            comedic_potential=0.4,
+            reason="很悲壮",
+            confidence=0.9,
+            transcript_quality=0.95,
+        )
+    )
+    config = AppConfig()
+    config.ai.enabled = True
+    config.ai.backend = "local_llm"
+    config.ai.model = "fake-model"
+    config.keywords.enabled = False  # 让 AI 有机会被调用（避开关键词快速通道）
+    pipeline, _capture, _recognizer, decisions, statuses, holder = build_pipeline(
+        text="我们来拖住他", config=config, ai_analyzer=analyzer
+    )
+    pipeline.start()
+    try:
+        assert wait_until(lambda: statuses)
+    finally:
+        pipeline.stop()
+    assert not any("转写不可信" in s.message for s in statuses)
