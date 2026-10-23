@@ -202,6 +202,8 @@ def test_pipeline_passes_recent_context_to_ai():
     config.ai.backend = "local_llm"
     config.ai.model = "fake-model"
     config.ai.max_context = 2
+    # 关掉关键词层：关键词强命中会走快速通道跳过 AI，这里要验证的是 AI 的上下文传递
+    config.keywords.enabled = False
     two_utterances = np.concatenate(
         [
             silence(0.5),
@@ -228,7 +230,7 @@ def test_pipeline_passes_recent_context_to_ai():
 
 
 def test_pipeline_falls_back_when_ai_fails():
-    """AI 报错时仍用关键词+规则决策，不崩、不假装有 AI 分。"""
+    """AI 报错时仍能决策，不崩、不假装有 AI 分（走 ai_unavailable 概率档）。"""
     from fakes import FakeAnalyzer
     from rusty_moment.detection.emotion_analyzer import AnalysisError
 
@@ -237,6 +239,8 @@ def test_pipeline_falls_back_when_ai_fails():
     config.ai.enabled = True
     config.ai.backend = "local_llm"
     config.ai.model = "fake-model"
+    # 关键词强命中会走快速通道跳过 AI，这里要验证 AI 失败路径，所以关掉关键词层
+    config.keywords.enabled = False
     # AI 启用但结果缺失时会走 ai_unavailable 概率档，这里固定成 100% 以免抽样造成 flaky
     config.trigger.probabilities["ai_unavailable"] = 1.0
     pipeline, _capture, _recognizer, decisions, statuses, holder = build_pipeline(
@@ -251,5 +255,5 @@ def test_pipeline_falls_back_when_ai_fails():
     decision, candidate = decisions[0]
     assert candidate.ai is None, "AI 失败时不应产生 AI 分数"
     assert "ai" not in decision.scores
-    assert decision.trigger, "关键词仍应能独立触发"
+    assert decision.trigger, "AI 缺失时应按 ai_unavailable 档照常触发"
     assert "超时" in candidate.ai_error

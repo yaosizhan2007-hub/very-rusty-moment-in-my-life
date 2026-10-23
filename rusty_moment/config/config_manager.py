@@ -375,20 +375,20 @@ class ModeConfig:
 @dataclass
 class TriggerConfig:
     cooldown_seconds: float = 30.0
-    trigger_threshold: float = 0.6
+    trigger_threshold: float = 0.5
     low_confidence_threshold: float = 0.35
-    min_voice_seconds: float = 0.8
+    min_voice_seconds: float = 0.4
     dedupe_window_seconds: float = 8.0
     ai_timeout_seconds: float = 4.0
     max_event_seconds: float = 300.0
     busy_policy: str = "ignore"
     weights: dict[str, float] = field(
-        default_factory=lambda: {"ai": 0.55, "keyword": 0.3, "rule": 0.15}
+        default_factory=lambda: {"ai": 0.45, "keyword": 0.4, "rule": 0.15}
     )
     probabilities: dict[str, float] = field(
         default_factory=lambda: {
             "serious": 1.0,
-            "low_confidence": 0.35,
+            "low_confidence": 0.6,
             "chaotic": 0.5,
             "chaotic_low_score": 0.2,
             "ai_unavailable": 0.6,

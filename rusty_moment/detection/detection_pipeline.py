@@ -225,7 +225,12 @@ class DetectionPipeline:
 
         ai_scores = None
         ai_error = ""
-        if cfg.ai.enabled and text:
+        # 关键词强命中时不等 AI：关键词是最硬的文本证据，AI 只是补充。
+        # 这样「兄弟，别管我」这类台词能立刻触发，不用为一次云端往返多等 0.6~2 秒。
+        keyword_strong = keyword is not None and keyword.matched and keyword.score >= 0.85
+        if keyword_strong:
+            log.debug("关键词强命中（%.2f），跳过 AI 层以降低延迟", keyword.score)
+        elif cfg.ai.enabled and text:
             if self._ai is not None and self._ai.available:
                 if cfg.ai.backend == "openai_compatible" and not cfg.privacy.cloud_consent:
                     ai_error = "未同意云端分析，已跳过 AI 层"

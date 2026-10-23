@@ -82,18 +82,21 @@ def make_candidate(
 
 
 def test_weights_are_renormalized_over_active_layers():
-    engine, _holder = make_engine()
+    engine, holder = make_engine()
     decision = engine.evaluate(make_candidate(keyword_score=1.0, rule_score=0.0))
     assert decision.trigger
-    # 关键词 1.0、规则 0.0 → 归一化后 keyword 权重应为 2/3
-    assert decision.weighted["keyword"] == pytest.approx(2 / 3 * 1.0, abs=1e-6)
-    assert decision.combined == pytest.approx(2 / 3, abs=1e-6)
+    # 只有 keyword / rule 两层有结果 → 权重在这两层之间重新归一化
+    weights = holder["cfg"].trigger.weights
+    expected = weights["keyword"] / (weights["keyword"] + weights["rule"])
+    assert decision.weighted["keyword"] == pytest.approx(expected * 1.0, abs=1e-6)
+    assert decision.combined == pytest.approx(expected, abs=1e-6)
 
 
 def test_threshold_blocks_low_score():
     engine, holder = make_engine()
     holder["cfg"].trigger.trigger_threshold = 0.9
-    decision = engine.evaluate(make_candidate(keyword_score=0.5, rule_score=0.0))
+    # 分数低于「最低置信度阈值」才会被判为分数不足（高于它的会进入抽查档）
+    decision = engine.evaluate(make_candidate(keyword_score=0.3, rule_score=0.0))
     assert not decision.trigger
     assert decision.rejected_by == "分数不足"
     assert "最低置信度阈值" in decision.reason
@@ -174,8 +177,9 @@ def test_ai_layer_participates_when_available():
     decision = engine.evaluate(make_candidate(keyword_score=0.0, rule_score=0.0, ai=ai))
     assert "ai" in decision.scores
     assert decision.scores["ai"] > 0.7
-    # AI 层权重 0.55，但另外两层给了 0 分，合成分被稀释到 0.55 × AI 分
-    assert decision.combined == pytest.approx(decision.scores["ai"] * 0.55, abs=1e-6)
+    # 另外两层给了 0 分，合成分被稀释到「AI 权重 × AI 分」
+    ai_weight = holder["cfg"].trigger.weights["ai"]
+    assert decision.combined == pytest.approx(decision.scores["ai"] * ai_weight, abs=1e-6)
     assert decision.trigger
 
 
@@ -188,11 +192,14 @@ def test_zero_score_layers_dilute_combined_score():
         dramatic_score=1.0, context_score=1.0, comedic_potential=0.0, reason="", confidence=1.0
     )
     decision = engine.evaluate(make_candidate(keyword_score=0.0, rule_score=0.0, ai=ai))
-    assert decision.combined == pytest.approx(0.55, abs=1e-6)
+    ai_weight = holder["cfg"].trigger.weights["ai"]
+    assert decision.combined == pytest.approx(ai_weight, abs=1e-6)
     # 满分 AI 判断被两层 0 分拉到主阈值以下，只能走「低置信度」概率档
     assert decision.combined < holder["cfg"].trigger.trigger_threshold
     assert decision.tier == "low_confidence"
-    assert decision.probability == pytest.approx(0.35)
+    assert decision.probability == pytest.approx(
+        holder["cfg"].trigger.probabilities["low_confidence"]
+    )
 
 
 def test_cooldown_blocks_before_scoring():
